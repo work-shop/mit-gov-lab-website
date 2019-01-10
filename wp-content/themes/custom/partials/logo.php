@@ -1,0 +1,1 @@
+<img src="<?php bloginfo( 'template_directory' ); ?>/images/logo-white.svg" title="The Avenue Concept Logo" alt="The Avenue Concept Logo">
