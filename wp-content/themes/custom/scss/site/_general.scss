@@ -1,28 +1,8 @@
-#viewport-label{ display: none; }
+
+/* STRUCTURE */
 
 body{
 	background-color: $body-background-color;
-	// padding-top: 0;	
-
-	// @media screen and (max-width: $md) {
-	// 	padding-top: $nav-height-md;
-	// }
-
-	// @media screen and (max-width: $sm) {
-	// 	padding-top: $nav-height-mobile;
-	// }
-
-	// &.sitewide-alert-on{
-	// 	padding-top: $nav-height + $sitewide-alert-height;	
-	// }
-
-	// &.home.sitewide-alert-on{
-	// 	padding-top: + $sitewide-alert-height;
-	// }
-}
-
-*{
-	word-wrap: break-word;
 }
 
 
@@ -52,13 +32,6 @@ body{
 }
 
 
-.flex-center{
-	@extend .d-flex;
-	@extend .justify-content-center;
-	@extend .align-items-center;
-}
-
-
 
 /* customize bootstrap container fluid parameters */
 .container-fluid{
@@ -80,58 +53,21 @@ body{
 		max-width: none;
 	}
 
-	&.container-fluid-extend{
-		padding-left: $container-fluid-padding - 15px;
-		padding-right: $container-fluid-padding - 15px;
-
-		@media screen and (max-width: $md) {
-			padding-left: $container-fluid-padding-md - 15px;
-			padding-right: $container-fluid-padding-md - 15px;
-		}
-
-		@media screen and (max-width: $sm) {
-			padding-left: $container-fluid-padding-mobile - 15px;
-			padding-right: $container-fluid-padding-mobile - 15px;
-		}	
-	}
 }
 
 
-/* sitewide section padding */
+/* MISC */
 
-.section-padded{
-	padding-top: 150px;
-	padding-bottom: 200px;
 
-	@media screen and (max-width: $md) {
-		padding-top: 100px;
-		padding-bottom: 150px;
-	}
-
-	@media screen and (max-width: $sm) {
-		padding-top: 50px;
-		padding-bottom: 75px;
-	}
+*{
+	word-wrap: break-word;
 }
-
-.section-header{
-	margin-bottom: 100px;
-
-	@media screen and (max-width: $md) {
-		margin-bottom: 75px;
-	}
-
-	@media screen and (max-width: $sm) {
-		margin-bottom: 50px;
-	}
-}
-
 
 a{
-	color: $aqua;
+	color: $brand;
 
 	&:hover{
-		color: $aqua;
+		color: $brand;
 	}
 
 	&:focus{
@@ -146,55 +82,6 @@ input{
 		outline: none;
 	}
 }
-
-.bg-lime{
-	background: $lime;
-}
-
-.lime{
-	color: $lime;
-}
-
-.bg-tan{
-	background: $tan;
-}
-
-.tan{
-	color: $tan;
-}
-
-.bg-slate{
-	background: $slate;
-}
-
-.slate{
-	color: $slate;
-}
-
-.bg-green{
-	background: $green;
-}
-
-.green{
-	color: $green;
-}
-
-.bg-dark-green{
-	background: $dark-green;
-}
-
-.dark-green{
-	color: $dark-green;
-}
-
-.bg-aqua{
-	background: $aqua;
-}
-
-.aqua{
-	color: $aqua;
-}
-
 
 
 /* sitewide button styles */
@@ -217,7 +104,6 @@ $text-button: (
 	display: inline-block;
 	text-align: center;
 	@include text-size($text-button);	
-	background-image: url('../images/blob-button-aqua.svg');
 	background-size: 100% 100%;
 
 	&.button-small{
@@ -277,41 +163,7 @@ $text-button: (
 
 
 
-//PAGINATION
-
-.pagination{
-	margin-top: 4vh;
-	text-align: center;
-
-	a,span{
-		margin-left: 6px;
-		margin-right: 6px;
-		@extend .bold;
-		padding: 4px;
-
-		&.prev,&.next{
-			font-family: 'modern_pictograms_proregular';
-			font-size: 27px;
-			position: relative;
-			top: 2px;
-		}
-
-		&.prev{
-			margin-right: 15px;
-		}
-
-		&.next{
-			margin-left: 15px;
-		}
-	}
-
-	span{
-		color: $medium;
-	}
-}
-
-
-//slick components(overrides scss/utilities/slick-components.scss)
+/* slick components(overrides scss/utilities/slick-components.scss) */
 
 .slick-arrow{
 	position: absolute;
@@ -419,7 +271,7 @@ $text-button: (
 }
 
 
-//site credit
+/* site credit */
 
 .site-credit h4{
 	font-size: 15px;
@@ -427,19 +279,5 @@ $text-button: (
 	@media screen and (max-width: $sm) {
 		font-size: 13px;
 		margin-left: 10px;
-	}
-}
-
-//cards
-
-.card{
-	.card-image{
-		img{
-			border-radius: 4px 4px 0px 0px;
-		}	
-	}
-
-	.card-text{
-		border-radius: 0px 0px 4px 4px;
 	}
 }

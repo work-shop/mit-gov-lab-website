@@ -20,7 +20,6 @@
 @import "utilities/jquery-accordian";
 @import "utilities/accordion";
 @import "utilities/flexible-content";
-@import "utilities/map-style"; // thanks to rubillionaire
 
 //site components
 @import "site/typography";
@@ -30,5 +29,9 @@
 @import "site/menus";
 @import "site/footer";
 @import "site/wysiwyg";
+@import "site/sitewide-alert";
 
-//site pages and components
+//site pages and partials
+@import "site/page";
+@import "site/home";
+@import "site/about";

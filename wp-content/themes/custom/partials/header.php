@@ -37,7 +37,7 @@
 		$social_image_array = get_field('social_media_image');
 		$social_image = $social_image_array['sizes']['fb'];
 	else:
-		$social_image = get_bloginfo( template_directory ) . '/images/social_card_v1.jpg';
+		$social_image = get_bloginfo( 'template_directory' ) . '/images/social_card_v1.jpg';
 	endif;
 
 	?>
@@ -61,32 +61,23 @@
 	<meta name="author" content="Work-Shop Design Studio http://workshop.co">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyCFQ2F5EK1p-g-xShVMv51XClmBGPTIUFQ"></script>
-
 	<?php wp_head(); ?>
 
 	<?php
 	$sitewide_alert_on = get_field('show_sitewide_alert', 'option');
+	$sitewide_alert_class = 'sitewide-alert-off';
 	if( $sitewide_alert_on === true ):
-		if( !isset($_COOKIE['tac_show_sitewide_alert']) || $_COOKIE['tac_show_sitewide_alert'] === false ):
+		if( !isset($_COOKIE['ws_show_sitewide_alert']) || $_COOKIE['ws_show_sitewide_alert'] === false ):
 			$sitewide_alert_class = 'sitewide-alert-on';
 			$show_sitewide_alert = true;
 		endif;
 	endif;
-	$announcement_on = get_field('show_announcement', '6');
-	if( is_page(6) && $announcement_on === true ):
-		$announcement_class = 'announcement-on';
-		$show_announcement = true;
-		//if( !isset($_COOKIE['tac_show_announcement']) || $_COOKIE['tac_show_announcement'] === false ):
-		//endif;
-	endif;
 	?>
 
 </head>
-<body <?php body_class('loading before-scroll modal-off menu-closed dropdown-off mobile-dropdown-off curve-off artworks-error-off' . $sitewide_alert_class . ' ' . $announcement_class . ' '); ?>>
+<body <?php body_class('loading before-scroll modal-off menu-closed dropdown-off mobile-dropdown-off curve-off ' . $sitewide_alert_class . ' '); ?>>
 
-	<?php get_template_part('partials/announcements'); ?>
+	<?php get_template_part('partials/sitewide_alert'); ?>
 	<?php get_template_part('partials/nav'); ?>
-	<?php get_template_part('partials/menus'); ?>
 
 	<main id="content">

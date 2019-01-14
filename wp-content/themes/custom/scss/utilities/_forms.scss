@@ -18,28 +18,26 @@ input,textarea,select{
 	&:focus{
 		outline: none;
 		border-radius: 6px;
-		border: 2px solid $aqua;
+		border: 2px solid $brand;
 	}
 
 	&[type="submit"]{
-		//@extend .button;
-		//background-color: transparent;
 		border: none;
 		max-width: 300px;
 		margin: 0 auto;
 		transition: all .1s;
-		border: 2px solid $aqua;
+		border: 2px solid $brand;
 		padding: 15px;
 		
 		
 		background-image: none;
-		color: $aqua;
+		color: $brand;
 		background: white;
 		border-radius: 20px;
 
 		&:hover{
 			background-image: none;
-			background: $aqua;
+			background: $brand;
 			color: white;
 		}
 	}

@@ -13,7 +13,6 @@ class WS_Site_Admin {
 
         add_filter( 'get_user_metadata', array( $this, 'pages_per_page_wpse_23503'), 10, 4 );
 
-
     }
 
     /**
@@ -25,16 +24,11 @@ class WS_Site_Admin {
 
         remove_meta_box("dashboard_primary", "dashboard", "side");   // WordPress.com blog
         remove_meta_box("dashboard_secondary", "dashboard", "side"); // Other WordPress news
-
         remove_post_type_support('page', 'comments');
-
         remove_menu_page('index.php');  // Remove the dashboard link from the Wordpress sidebar.
-        //remove_menu_page('edit.php');   // Remove the posts link from the Wordpress sidebar.
         remove_menu_page('edit-comments.php');   // Remove the comments link from the Wordpress sidebar.
 
         if ( !current_user_can( 'administrator' ) ) {
-            remove_menu_page('admin.php?page=wc-settings'); // Remove WC Configuration Settings
-            remove_menu_page('admin.php?page=gf_edit_forms'); // Remove Gravity Forms Edit Page
 
             if ( isset( $submenu['themes.php']) ) {
                 foreach ($submenu['themes.php'] as $key => $menu_item ) {

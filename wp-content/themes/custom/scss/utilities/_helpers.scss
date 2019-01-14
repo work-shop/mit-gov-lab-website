@@ -22,6 +22,11 @@
 	@include transform(translateY(-50%));
 }
 
+.flex-center{
+	@extend .d-flex;
+	@extend .justify-content-center;
+	@extend .align-items-center;
+}
 
 .overflow-hidden{
 	overflow: hidden;

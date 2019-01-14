@@ -17,16 +17,6 @@ function slickSlideshows( config ) {
 			speed: config.speed
 		});
 
-		$('.slick-home').slick({
-			slidesToShow: config.slidesToShow,
-			dots: false,
-			arrows: true,
-			autoplay: config.autoplay,
-			fade: false,
-			autoplaySpeed: config.autoplaySpeed,
-			speed: config.speed
-		});
-
 	});
 
 }
