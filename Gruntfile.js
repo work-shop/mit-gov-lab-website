@@ -7,7 +7,7 @@ var sass = require('node-sass');
 const bourbon_includePaths = require('node-bourbon').includePaths;
 const slick_includePaths = path.join(__dirname,'node_modules','slick-carousel', 'slick');
 
-const theme_root = '.';
+const theme_root = './wp-content/themes/custom';
 const output_dir = path.join( theme_root, 'bundles' );
 
 const scss_main_dir = path.join( theme_root, 'scss' );
@@ -149,6 +149,11 @@ module.exports = function(grunt) {
             }
         },
     });
+
+  // grunt.loadNpmTasks('grunt-contrib-watch');
+    // grunt.loadNpmTasks('grunt-sass');
+    // grunt.loadNpmTasks('grunt-browserify');
+    // grunt.loadNpmTasks('grunt-extract-sourcemap');
 
   grunt.registerTask('default', ['sass:dev', 'browserify:dev', 'extract_sourcemap:dev', 'watch']);
   grunt.registerTask('dev', ['browserify:dev','sass:dev', 'sass:adminDev', 'extract_sourcemap:dev']);
