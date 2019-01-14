@@ -22,8 +22,7 @@
     "build-development": "grunt dev",
     "build-production": "grunt dist",
     "deploy-staging": "./.deploy-staging.sh",
-    "deploy-production": "./.deploy-production.sh",
-    "pull-database": "./.pull-database.sh"
+    "deploy-production": "./.deploy-production.sh"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
