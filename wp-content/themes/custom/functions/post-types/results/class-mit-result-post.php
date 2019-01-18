@@ -1,15 +1,15 @@
 <?php
 
-class WS_Custom_Post extends WS_Custom_Post_Type {
+class MIT_Result_Post extends WS_Custom_Post_Type {
 
-    public static $slug = 'custom';
+    public static $slug = 'results';
 
-    public static $singular_name = 'Custom Post';
+    public static $singular_name = 'Result';
 
-    public static $plural_name = 'Custom Posts';
+    public static $plural_name = 'Results';
 
     public static $post_options = array(
-        'menu_icon'                 => 'dashicons-products',
+        'menu_icon'                 => 'dashicons-analytics',
         'hierarchical'              => false,
         'has_archive'               => true,
         'menu_position'             => 4,

@@ -62,7 +62,9 @@ abstract class WS_Custom_Post_Type {
                     'rewrite' => WS_Custom_Post_Type::default_for_key( 'rewrite',  static::$post_options, array() ),
                     'query_var' => true,
                     'can_export' => true,
-                    'show_in_rest' => true
+                    'show_in_rest' => true,
+                    'rest_base' => static::$slug,
+                    'rest_controller_class' => 'WP_REST_Posts_Controller',
                 )
 
             );

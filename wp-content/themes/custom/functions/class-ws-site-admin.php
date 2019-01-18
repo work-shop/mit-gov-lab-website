@@ -7,11 +7,13 @@ class WS_Site_Admin {
         add_action('admin_menu', array( $this, 'manage_admin_menu_options' ) );
         add_action('acf/init', array($this, 'add_options_pages'));
         add_action( 'admin_head', array( $this, 'admin_css'));
+        add_action('admin_bar_menu', array($this, 'remove_default_post_type' ), 999);
 
         add_action('wp_dashboard_setup', array($this, 'remove_dashboard_widgets') );
         add_action('wp_before_admin_bar_render', array($this, 'remove_admin_bar_items'));
 
         add_filter( 'get_user_metadata', array( $this, 'pages_per_page_wpse_23503'), 10, 4 );
+
 
     }
 
@@ -27,6 +29,7 @@ class WS_Site_Admin {
         remove_post_type_support('page', 'comments');
         remove_menu_page('index.php');  // Remove the dashboard link from the Wordpress sidebar.
         remove_menu_page('edit-comments.php');   // Remove the comments link from the Wordpress sidebar.
+        remove_menu_page('edit.php'); // remove default post type.
 
         if ( !current_user_can( 'administrator' ) ) {
 
@@ -46,8 +49,16 @@ class WS_Site_Admin {
     }
 
     /**
+     * Remove default post type from admin bar.
+     */
+    public function remove_default_post_type( $wp_admin_bar ) {
+        $wp_admin_bar->remove_node('edit.php');
+    }
+
+    /**
      * Additional ACF options pages can be registered here.
      */
+
     public function add_options_pages() {
         if ( function_exists('acf_add_options_page') ) {
             acf_add_options_page(array(

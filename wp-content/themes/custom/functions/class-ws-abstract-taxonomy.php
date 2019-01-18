@@ -29,6 +29,8 @@ abstract class WS_Taxonomy {
                     ),
                     'public' => $public,
                     'show_in_rest' => true,
+                    'rest_base' => $slug,
+                    'rest_controller_class' => 'WP_REST_Terms_Controller',
                     'show_tag_cloud' => false,
                     'show_in_quick_edit' => false,
                     'show_admin_column' => true,
