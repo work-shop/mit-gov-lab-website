@@ -1,0 +1,133 @@
+$individual-offset: 8em;
+$individual-truncated-offset:2em;
+
+.individual-metadata-container{
+    position: relative;
+    padding-bottom:$individual-offset;
+    margin-bottom:$individual-offset;
+}
+
+
+.individual-metadata-box {
+    position:absolute;
+    bottom:-$individual-offset;
+    left:0;
+
+    padding:2em;
+    margin-bottom: 3em;
+}
+
+.individual-metadata-container.truncated {
+    padding-bottom:$individual-truncated-offset;
+    margin-bottom:$individual-truncated-offset;
+}
+
+
+.individual-metadata-box.truncated {
+    bottom:-$individual-truncated-offset;
+}
+
+.individual-title {
+    font-weight: bold;
+    color: white;
+    margin-bottom: .25em;
+}
+
+.individual-title-divider {
+    display: block;
+    width:100px;
+    border-bottom: 5px solid $white;
+    margin-bottom: 1em;
+}
+
+.individual-summary {
+    color: white;
+    margin-bottom: 1em;
+}
+
+.individual-metadata {
+    font-weight: bold;
+    color: white;
+}
+
+
+
+// Research Related Definitions
+.research-metadata-box {
+    background-color: $research-color;
+}
+
+.research-individual-label {
+    background-color: white;
+    color:$research-color;
+    padding:5px;
+}
+
+
+// Results Related Definitions
+.result-metadata-box {
+    background-color: $results-color;
+}
+
+.results-individual-label {
+    background-color: white;
+    color:$results-color;
+    padding:5px;
+}
+
+
+// Updates Related Definitions
+
+.update-metadata-box {
+    background-color: $updates-color;
+}
+
+.updates-individual-label {
+    background-color: white;
+    color:$updates-color;
+    padding:5px;
+}
+
+
+
+
+@media (max-width: $xs-size) {
+
+    .individual-initial-column {
+        padding-top: 0px;
+    }
+
+    .individual-metadata-container{
+        position: relative;
+        margin-bottom:2em;
+        padding-bottom:0em;
+    }
+
+    .individual-metadata-box {
+        position: static;
+        width:100%;
+        margin:0;
+    }
+
+    .individual-title {
+        margin-bottom: .2em;
+    }
+
+    .individual-title-divider {
+        margin-bottom: 1em;
+    }
+
+    .individual-summary {
+        margin-bottom: 1em;
+    }
+
+}
+
+@media ( min-width: $lg-size ) {
+    .individual-metadata-box {
+        width:980px;
+        left:50%;
+        margin-left:0px;
+        transform:translateX(-50%);
+    }
+}

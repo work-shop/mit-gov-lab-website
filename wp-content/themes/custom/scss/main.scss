@@ -28,10 +28,11 @@
 @import "site/nav";
 @import "site/menus";
 @import "site/footer";
+@import "site/headers";
 @import "site/wysiwyg";
 @import "site/sitewide-alert";
 
 //site pages and partials
 @import "site/page";
-@import "site/home";
-@import "site/about";
+@import "site/map";
+@import "site/style";

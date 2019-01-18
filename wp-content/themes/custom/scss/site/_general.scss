@@ -47,7 +47,7 @@ body{
 	@media screen and (max-width: $sm) {
 		padding-left: $container-fluid-padding-mobile;
 		padding-right: $container-fluid-padding-mobile;
-	}	
+	}
 
 	&.container-fluid-stretch{
 		max-width: none;
@@ -99,11 +99,11 @@ $text-button: (
 	font-family: $font-main;
 	color: white;
 	@extend .bold;
-	@extend .uppercase;	
+	@extend .uppercase;
 	@extend .tracked-less;
 	display: inline-block;
 	text-align: center;
-	@include text-size($text-button);	
+	@include text-size($text-button);
 	background-size: 100% 100%;
 
 	&.button-small{
@@ -185,7 +185,7 @@ $text-button: (
 		width: 30px;
 		top: 50%;
 		margin-top: -40px;
-	}	
+	}
 
 	&:hover{
 		cursor: pointer;
@@ -211,7 +211,7 @@ $text-button: (
 			height: 80px;
 			line-height: 80px;
 			font-size: 60px;
-		}			
+		}
 	}
 
 	&.slick-next{
@@ -220,10 +220,10 @@ $text-button: (
 
 		@media screen and (max-width: $md) {
 			right: 0;
-		}			
+		}
 
 		&:after{
-			content: '—';			
+			content: '—';
 		}
 
 	}
@@ -235,7 +235,7 @@ $text-button: (
 	left: 50%;
 	@include transform(translate(-50%,0));
 	bottom: -30px;
-	
+
 	li{
 		display: inline-block;
 		margin-right: 10px;
@@ -251,7 +251,7 @@ $text-button: (
 	button{
 		background: none;
 		border: none;
-		outline: none;	
+		outline: none;
 		font-size: 0;
 
 		display: block;
@@ -261,11 +261,11 @@ $text-button: (
 
 		background: $light;
 		border: 1px solid $medium-dark;
-		border-radius: 10px;	
+		border-radius: 10px;
 
 		&:hover{
 			cursor: pointer;
-		}	
+		}
 
 	}
 }
@@ -279,5 +279,522 @@ $text-button: (
 	@media screen and (max-width: $sm) {
 		font-size: 13px;
 		margin-left: 10px;
+	}
+}
+
+
+
+
+// Imported from GOV/LAB
+
+/*
+OBJECTS
+colors
+margins and padding
+structure and position
+backgrounds
+animations
+forms
+fancy objects
+flexslider
+*/
+
+/********** @COLORS ********************/
+
+.brand {
+	color:$brand;
+}
+
+.gray {
+    color:#aaa;
+}
+
+.grayscale {
+	filter: gray;
+	filter: grayscale(1);
+	-webkit-filter:grayscale(1);
+}
+
+/********** @MARGINS AND PADDING *********/
+
+@for $i from 0 through 9 {
+  .m#{$i} {
+  	margin-bottom: 1em * $i;
+  	margin-top: 1em * $i;
+  }
+}
+
+@for $i from 0 through 9 {
+  // .mb#{$i} {
+
+  // }
+
+  @include size-dependent( ".mb#{$i}" ) {
+  	margin-bottom: 1em * $i;
+  }
+
+}
+
+@for $i from 0 through 9 {
+  .mt#{$i} {
+  	margin-top: 1em * $i;
+  }
+}
+
+@for $i from 0 through 9 {
+  .ml#{$i} {
+  	margin-left: 1em * $i;
+  }
+}
+
+@for $i from 0 through 9 {
+  .mr#{$i} {
+  	margin-right: 1em * $i;
+  }
+}
+
+
+@for $i from 0 through 9 {
+  .p#{$i} {
+  	padding: 1em * $i;
+  }
+}
+
+@for $i from 0 through 9 {
+  .pt#{$i} {
+  	padding-top: 1em * $i;
+  }
+}
+
+@for $i from 0 through 9 {
+  .pb#{$i} {
+  	padding-bottom: 1em * $i;
+  }
+}
+
+@for $i from 0 through 9 {
+  .pl#{$i} {
+  	padding-left: 1em * $i;
+  }
+}
+
+@for $i from 0 through 9 {
+  .pr#{$i} {
+  	padding-right: 1em * $i;
+  }
+}
+
+@for $i from 0 through 9 {
+  .b#{$i} {
+  	border: 1em * $i;
+  }
+}
+
+.p-min {
+    padding: .5em;
+}
+
+.padded-less{
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+}
+
+.padded{
+	padding-top: 4%;
+	padding-bottom: 4.25%;
+}
+
+.padded-more{
+	padding-top: 8%;
+	padding-bottom: 9%;
+}
+
+
+
+/********** @BACKGROUNDS *********/
+
+
+@include size-dependent( ".bg-light" ) {
+	background: $light;
+}
+
+@include size-dependent( ".bg-white" ) {
+	background: $ultra-light;
+}
+
+.bg-real-white {
+    background-color: white;
+}
+
+.bg-brand{
+	background: $brand;
+}
+
+.bg-dark{
+	background: $dark;
+}
+
+.bg-yellow{
+	background: yellow;
+}
+
+.bg-pink{
+	background: pink;
+}
+
+.bg-orange{
+	background: orange;
+}
+
+.bg-green{
+	background: green;
+}
+
+
+.bg-gradient{
+ 	@include gradient();
+}
+
+.background-cover{
+	background-size: cover;
+}
+
+.background-mask-light{
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(255,255,255,.5);
+		@include transition(all);
+	}
+}
+
+.background-mask-dark{
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(40,30,30,.75);
+		@include transition(all);
+	}
+}
+
+/********** @BORDERS AND SHADOWS *********/
+
+.shadow{
+	@include box-shadow(0,0,1px,rgba(53,50,50,.35));
+}
+
+.border{
+	border: 2px solid;
+}
+
+.border-brand{
+	border: 2px solid $brand;
+}
+
+
+.border-brand-bottom {
+	border-bottom: 2px solid $brand;
+}
+
+/********** @VIEWPORT UNITS *********/
+
+
+
+
+/********** @STRUCTURE AND POSITION *********/
+
+.huge {
+	font-size: 6em;
+}
+
+.full{
+	width: 100%;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+
+@include size-dependent(".vertical-center") {
+	margin-top: 0;
+	position: relative;
+	top: 49%;
+	@include transform(translate(0,-50%));
+}
+
+.display-block{
+	display: block;
+}
+
+.crop{
+	overflow: hidden;
+}
+
+.inline {
+	display: inline !important;
+}
+
+@include size-dependent( ".hidden" ) {
+	display: none;
+}
+
+@include size-dependent( ".visible" ) {
+	display: inherit;
+}
+
+/********** @ANIMATIONS *********/
+
+.skew-field {
+	@include transition(transform);
+	@include transform( skewX( $open-skew ) );
+
+	&:hover, &:active {
+		@include transform( skewX( $closed-skew ) );
+	}
+
+	&:hover * {
+		//@include transform( skewX( - $closed-skew ) );
+	}
+}
+
+$slide-distance-vertical: 20px;
+
+.fade-in{
+	@include animation(fade-in, 1s, ease, 0s, 1);
+}
+@include keyframes(fade-in){
+	0% { opacity: 0;  }
+	100% { opacity: 1; }
+}
+
+.fade-out{
+	@include animation(fade-out, 1s, ease, 0s, 1);
+}
+@include keyframes(fade-out){
+	0% { opacity: 1;  }
+	100% { opacity: 0; }
+}
+
+.fade-in-slide-up{
+	@include animation(fade-in-slide-up, .5s, ease, 1s, 1);
+	position: relative;
+}
+@include keyframes(fade-in-slide-up){
+	0% { opacity: 0; top: $slide-distance-vertical; }
+	50% { opacity: 1; top: $slide-distance-vertical / 3; }
+	100% { opacity: 1; top: 0px; }
+}
+
+.fade-in-slide-down{
+	@include animation(fade-in-slide-down, .5s, ease, 1s, 1);
+	position: relative;
+}
+@include keyframes(fade-in-slide-down){
+	0% { opacity: 0; top: -1 * $slide-distance-vertical; }
+	50% { opacity: 1; top: -1 * ($slide-distance-vertical / 3); }
+	100% { opacity: 1; top: 0px; }
+}
+
+
+
+/********** @FANCY OBJECTS *********/
+
+.loading{
+	opacity: 0;
+	@include transition(opacity,.25s);
+}
+
+.loaded{
+	opacity: 1;
+}
+
+.block{
+	position: relative;
+	width: 100%;
+	display: block;
+	z-index: 1;
+
+	&.crop{
+		overflow: hidden;
+	}
+
+	&.active{
+
+	}
+
+	&.activated{
+
+	}
+
+}
+
+.block-background{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background-size: cover;
+	background-position: center top;
+
+	&:after{
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		background: rgba(0,0,0,0);
+		@include transition(all);
+	}
+}
+
+.background{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#edit-button{
+	position: fixed;
+	bottom: 80px;
+	right: 30px;
+	z-index: 10000;
+	width: 40px;
+	height: 40px;
+	display: table;
+	@include transition();
+	background: #00f;
+	padding: 5px 9px;
+
+	&:hover{
+		bottom: 83px;
+		background: #11f;
+	}
+}
+
+
+/********** @FORMS *********/
+
+input,textarea{
+
+	padding: 5px;
+	outline: none;
+	width: 100%;
+	background: $white;
+	color: $dark;
+
+	font-size:1.2em;
+
+	&:focus{
+		@extend .bold;
+		outline: none;
+		border: 2px solid $brand;
+	}
+
+	&[type="submit"]{
+		@extend .bold;
+		border:0;
+        font-size: 1.2em;
+		outline: none;
+		padding: 10px 15px;
+		width: auto;
+		text-align: center;
+
+	}
+
+}
+
+/********** @FLEXSLIDER *********/
+
+.flexslider li {
+	background-size: cover;
+}
+
+.flexslider-direction{
+	height: 100%;
+	z-index: 6;
+	position: absolute;
+	right: 0;
+	width: auto;
+	height: 60px;
+	top: 48%;
+	margin-top: -30px;
+	@include transition(all,.25s);
+
+	.icon:before{
+		font-size: 90px;
+		color: $brand;
+	}
+
+	&.previous{
+		right: auto;
+		left: 0;
+	}
+
+	&:hover{
+		cursor: pointer;
+		cursor: w-resize;
+	}
+
+	&.next:hover{
+		cursor: pointer;
+		cursor: e-resize;
+	}
+
+}
+
+.flexslider-controls{
+	position: absolute;
+	width: 300px;
+	margin-left: -150px;
+	z-index: 6;
+	left: 50%;
+	text-align: center;
+	bottom: -40px;
+	height: 20px;
+
+	li{
+		list-style: none;
+		margin: 0 7px;
+		display: inline-block;
+		overflow: hidden;
+
+		a{
+			display: block;
+			text-indent: 9999px;
+			width: 15px;
+			height: 15px;
+			background: darken($light,5);
+			@include border-radius(30px);
+
+			&:hover{
+				cursor: pointer;
+			}
+
+			&.flex-active{
+				background: $brand;
+			}
+		}
 	}
 }
