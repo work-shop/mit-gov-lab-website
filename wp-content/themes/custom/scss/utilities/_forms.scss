@@ -12,7 +12,7 @@ input,textarea,select{
 	width: 100%;
 	//max-width: 300px;
 	color: $dark;
-	@extend .font-main;
+	@extend .font-main !optional;
 	font-size: 19px;
 
 	&:focus{
@@ -28,8 +28,8 @@ input,textarea,select{
 		transition: all .1s;
 		border: 2px solid $brand;
 		padding: 15px;
-		
-		
+
+
 		background-image: none;
 		color: $brand;
 		background: white;
