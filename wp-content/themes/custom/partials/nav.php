@@ -7,7 +7,7 @@
 			<div id="logo" class="col-xs-4 col-sm-4">
 
 				<a class="link" href="/">
-					<img src="/static/images/mitgovlab.svg" alt="logo"/>
+					<img src="<?php echo get_template_directory_uri(); ?>/images/mitgovlab.svg" alt="logo"/>
 				</a>
 
 			</div>
@@ -16,16 +16,16 @@
 				<ul class="row">
 
                     <li class="centered col-xs-1 col-xs-offset-6 col-sm-offset-1 col-sm-1 menu-item">
-                        <a class="sync m0 bold uppercase menu-trigger h4 visible-xs" href="#">Menu</a>
+                        <a class="sync m0 bold uppercase menu-trigger h4 hidden-sm hidden-md hidden-lg" href="#">Menu</a>
                     </li>
 
-					<li class="centered hidden-xs col-xs-3 col-sm-2"><a class="sync bold uppercase {% if ( getCurrentUrl() == url( 'about' ) ) %}active{% endif %}" href="/about">About</a></li>
+					<li class="centered hidden-xs col-xs-3 col-sm-2"><a class="sync bold uppercase" href="/about">About</a></li>
 
-        			<li class="centered hidden-xs col-xs-3 col-sm-2"><a class="sync bold uppercase {% if ( getCurrentUrl() == url( 'news' ) ) %}active{% endif %}" href="/news">{{ news_name }}</a></li>
+        			<li class="centered hidden-xs col-xs-3 col-sm-2"><a class="sync bold uppercase" href="/news">Updates</a></li>
 
-                    <li class="centered hidden-xs col-xs-3 col-sm-2"><a class="sync bold uppercase {% if ( getCurrentUrl() == url( 'projects' ) ) %}active{% endif %}" href="/projects">{{ projects_name }}</a></li>
+                    <li class="centered hidden-xs col-xs-3 col-sm-2"><a class="sync bold uppercase" href="/projects">Research</a></li>
 
-                    <li class="centered hidden-xs col-xs-3 col-sm-2"><a class="sync bold uppercase {% if ( getCurrentUrl() == url( 'output' ) ) %}active{% endif %}" href="/output">{{ output_name }}</a></li>
+                    <li class="centered hidden-xs col-xs-3 col-sm-2"><a class="sync bold uppercase" href="/output">Results</a></li>
 
                     <li class="centered col-xs-1 col-xs-offset-2 col-sm-offset-0 col-sm-1 menu-item">
                         <a id="search-trigger-button" class="h3 search-button search-trigger pictogram dark" href="#">s</a>

@@ -5,21 +5,21 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<title>
-		<?php 
+		<?php
 		if( is_front_page() ){
 			bloginfo( 'name' ); echo ' | ';  bloginfo( 'description' );
 		} elseif( is_404() ){
 			bloginfo( 'name' );
-		} 
+		}
 		else{
 			wp_title( false ); echo ' | '; bloginfo( 'name' );
 		}
 		?>
 	</title>
 
-	<?php 
+	<?php
 	if( get_field('social_media_title') ):
-		$social_title = get_field('social_media_title'); 
+		$social_title = get_field('social_media_title');
 	else:
 		$social_title = get_bloginfo( 'name' );
 	endif;
@@ -29,8 +29,8 @@
 		$social_description = '';
 	endif;
 	if( get_field('social_media_url') ):
-		$social_url = get_field('social_media_url'); 
-	else: 
+		$social_url = get_field('social_media_url');
+	else:
 		$social_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 	endif;
 	if( get_field('social_media_image') ):
@@ -78,6 +78,7 @@
 <body <?php body_class('loading before-scroll modal-off menu-closed dropdown-off mobile-dropdown-off curve-off ' . $sitewide_alert_class . ' '); ?>>
 
 	<?php get_template_part('partials/sitewide_alert'); ?>
+    <?php get_template_part('partials/menu'); ?>
 	<?php get_template_part('partials/nav'); ?>
 
 	<main id="content">

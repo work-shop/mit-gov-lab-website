@@ -78,8 +78,9 @@ class WS_Site {
 
             wp_register_style( 'fonts', get_template_directory_uri() . '/fonts/fonts.css');
             wp_enqueue_style( 'fonts' );
-            wp_enqueue_style('main-css', $compiled_resources_uri . $main_css, array(), null);
-            wp_enqueue_script('main-js', $compiled_resources_uri . $main_js, $main_js_ver);
+            wp_enqueue_script('jquery');
+            wp_enqueue_style('main-css', $compiled_resources_uri . $main_css, array('fonts'), null);
+            wp_enqueue_script('main-js', $compiled_resources_uri . $main_js, array('jquery'), $main_js_ver);
 
         }
     }
