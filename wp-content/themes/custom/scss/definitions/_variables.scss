@@ -1,53 +1,6 @@
 
 /* Variables */
 
-//brand colors
-$brand: #f79941;
-
-
-//grays
-$dark: #2a3f46;
-$ultra-light: #F5F5F5;
-$light: lighten($brand,45%);
-$light: desaturate($light, 30%);
-$medium-light: #9B9B9B;
-$medium: lighten($dark, 34%);
-$medium: desaturate($medium, 12%);
-$medium-dark: #555555;
-$tan: #F7F5F2;
-
-
-//utility colors
-$error: lighten(#ea4444,5%);
-
-
-//sizes
-$nav-height: 80px;
-$nav-height-md: 90px;
-$nav-height-after: 80px;
-$nav-drop: $nav-height;
-$nav-drop-after: $nav-height - 1px;
-$nav-height-mobile: 60px;
-$sitewide-alert-height: 50px;
-$container-fluid-max-width: none;
-$container-fluid-padding: 80px;
-$container-fluid-padding-md: 40px;
-$container-fluid-padding-mobile: 15px;
-$container-fluid-sum: $container-fluid-padding * 2;
-$container-fluid-sum-mobile: $container-fluid-padding-mobile * 2;
-
-
-//transitions
-$modal-transition: .4s;
-
-
-//breakpoints
-$xs: 575px;
-$sm: 767px;
-$md: 991px;
-$lg: 1199px;
-
-
 //site
 $body-background-color: white;
 
@@ -71,6 +24,10 @@ $dark: #222222;
 $medium-dark: lighten( $dark, 20 );
 $medium: #555555;
 $error: #ff4a4a;
+$tan: #F7F5F2;
+
+//utility colors
+$error: lighten(#ea4444,5%);
 
 $research-color:#cc3333;
 $research-color-60:rgba(204,51,51,.8);
@@ -85,7 +42,15 @@ $black-rgba-30: rgba(0, 0, 0, .4);
 $brand-rgba-60: rgba(204, 51, 51, .7);
 
 $nav-height: 75px;
+$nav-height-mobile: 60px;
 $mobile-margins: 15px;
+$container-fluid-max-width: none;
+$container-fluid-padding: 80px;
+$container-fluid-padding-md: 40px;
+$container-fluid-padding-mobile: 15px;
+$container-fluid-sum: $container-fluid-padding * 2;
+$container-fluid-sum-mobile: $container-fluid-padding-mobile * 2;
+
 
 $transitions: .25s;
 
@@ -101,8 +66,17 @@ $sm-query: "max-width: #{$sm-size}";
 $xs-size: 767px;
 $xs-query: "max-width: #{ $xs-size }";
 
-
+//transitions
+$modal-transition: .4s;
 $transition-duration: .75s;
+
+//breakpoints
+// Saved for compatibility w/ Greg's scss.
+$xs: $xs-size;
+$sm: $sm-size;
+$md: $md-size;
+$lg: $lg-size;
+
 
 $open-skew: 0deg;
 $closed-skew:-5deg;
