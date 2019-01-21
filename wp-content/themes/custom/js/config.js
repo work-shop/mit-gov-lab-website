@@ -2,8 +2,8 @@
 
 var global_config = {
     navHeight: 80,
-    mobileNavHeight: 60,  
-    navPadding: 100,      
+    mobileNavHeight: 60,
+    navPadding: 100,
     transitionDuration: 1000,
     mobileBreakpoint: 768
 };
@@ -13,8 +13,8 @@ var config = {
         linkSelector: '.has-sub-menu',
         bodyOffClass: 'dropdown-off',
         bodyOnClass: 'dropdown-on',
-        dropdownSelector: '.menu-dropdown',     
-        blanketSelector: '#blanket-dropdown'     
+        dropdownSelector: '.menu-dropdown',
+        blanketSelector: '#blanket-dropdown'
     },
     viewportLabel: {
         viewportLabelPxSelector: '#viewport-label-px'
@@ -24,14 +24,14 @@ var config = {
         navHeight: global_config.navHeight,
         mobileNavHeight: global_config.mobileNavHeight,
         mobileBreakpoint: global_config.mobileBreakpoint,
-        activeOnMobile: true        
+        activeOnMobile: true
     },
     stickyNav: {
         selector: '.page-nav',
         navHeight: global_config.navHeight,
         mobileNavHeight: global_config.mobileNavHeight,
         mobileBreakpoint: global_config.mobileBreakpoint,
-        activeOnMobile: true        
+        activeOnMobile: true
     },
     linksNewTab: {
     },
@@ -79,7 +79,7 @@ var config = {
         autoplay: true,
         fade: true,
         autoplaySpeed: 5000,
-        speed: 700        
+        speed: 700
     },
     accordian: {
 

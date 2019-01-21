@@ -22,19 +22,22 @@ import { stickyNav } from './sticky-nav.js';
 import { dropdowns } from './dropdowns.js';
 import { menuToggle } from './menu-toggle.js';
 
-//must use 
+//must use
 livereload();
 loading(config.loading);
-linksNewtab(config.linksNewtab);
-viewportLabel(config.viewportLabel);
-jqueryAccordian();
-accordian();
-jumpLinks(config.jumpLinks);
-modals(config.modals);
-slickSlideshows(config.slickSlideshows);
-sitewideAlert();
+// linksNewtab(config.linksNewtab);
+// viewportLabel(config.viewportLabel);
+// jqueryAccordian();
+// accordian();
+// jumpLinks(config.jumpLinks);
+// modals(config.modals);
+// slickSlideshows(config.slickSlideshows);
+// sitewideAlert();
 
 //optional
-stickyNav(config.stickyNav);
-dropdowns(config.dropdowns);
-menuToggle(config.menuToggle);
+// stickyNav(config.stickyNav);
+// dropdowns(config.dropdowns);
+// menuToggle(config.menuToggle);
+
+// NOTE: use old-style require for
+require('./legacy/functions.js');
