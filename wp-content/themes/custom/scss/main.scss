@@ -1,6 +1,7 @@
 
 @import "bourbon";
-@import "bootstrap/bootstrap";
+@import "bootstrap/bootstrap"; // TODO: remove references to this, and deprecate issues with our code that depends on it in this project.
+@import "bootstrap";
 @import "slick.scss";
 
 //definitions

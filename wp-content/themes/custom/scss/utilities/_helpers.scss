@@ -23,9 +23,9 @@
 }
 
 .flex-center{
-	@extend .d-flex;
-	@extend .justify-content-center;
-	@extend .align-items-center;
+	@extend .d-flex !optional;
+	@extend .justify-content-center !optional;
+	@extend .align-items-center !optional;
 }
 
 .overflow-hidden{
@@ -108,7 +108,7 @@
 	@media screen and (max-width: $xs) {
 		background: white;
 		color: #333;
-	}	
+	}
 
 	#viewport-label-size:before{
 		font-size: 17px;
@@ -132,7 +132,7 @@
 		@media screen and (max-width: $xs) {
 			content: 'xs';
 			color: #333;
-		}				
+		}
 	}
 }
 
