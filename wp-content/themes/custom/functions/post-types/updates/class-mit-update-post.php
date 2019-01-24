@@ -18,7 +18,7 @@ class MIT_Update_Post extends WS_Custom_Post_Type {
                                         'revisions'
                                     ),
         'rewrite'                   => array(
-                                        'slug' => 'custom-categories',
+                                        'slug' => 'updates',
                                         'with_front' => false,
                                         'feeds' => true,
                                         'pages' => true

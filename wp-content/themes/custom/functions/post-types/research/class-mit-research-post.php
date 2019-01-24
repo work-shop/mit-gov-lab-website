@@ -18,7 +18,7 @@ class MIT_Research_Post extends WS_Custom_Post_Type {
                                         'revisions'
                                     ),
         'rewrite'                   => array(
-                                        'slug' => 'custom-categories',
+                                        'slug' => 'research',
                                         'with_front' => false,
                                         'feeds' => true,
                                         'pages' => true
