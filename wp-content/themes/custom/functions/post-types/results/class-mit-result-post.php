@@ -11,7 +11,7 @@ class MIT_Result_Post extends WS_Custom_Post_Type {
     public static $post_options = array(
         'menu_icon'                 => 'dashicons-analytics',
         'hierarchical'              => false,
-        'has_archive'               => true,
+        'has_archive'               => false,
         'menu_position'             => 4,
         'supports'                  => array(
                                         'title',

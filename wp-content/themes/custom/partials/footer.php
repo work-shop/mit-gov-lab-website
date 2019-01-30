@@ -1,4 +1,3 @@
-        </main>
 
         <?php get_template_part('partials/footer_site' ); ?>
 

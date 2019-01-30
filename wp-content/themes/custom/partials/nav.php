@@ -21,11 +21,11 @@
 
 					<li class="centered hidden-xs col-xs-3 col-sm-2"><a class="sync uppercase" href="/about">About</a></li>
 
-        			<li class="centered hidden-xs col-xs-3 col-sm-2"><a class="sync uppercase" href="/news">Updates</a></li>
+        			<li class="centered hidden-xs col-xs-3 col-sm-2"><a class="sync uppercase" href="/updates">Updates</a></li>
 
-                    <li class="centered hidden-xs col-xs-3 col-sm-2"><a class="sync uppercase" href="/projects">Research</a></li>
+                    <li class="centered hidden-xs col-xs-3 col-sm-2"><a class="sync uppercase" href="/research">Research</a></li>
 
-                    <li class="centered hidden-xs col-xs-3 col-sm-2"><a class="sync uppercase" href="/output">Results</a></li>
+                    <li class="centered hidden-xs col-xs-3 col-sm-2"><a class="sync uppercase" href="/results">Results</a></li>
 
                     <li class="centered col-xs-1 col-xs-offset-2 col-sm-offset-0 col-sm-1 menu-item">
                         <a id="search-trigger-button" class="h3 search-button search-trigger pictogram dark" href="#">s</a>

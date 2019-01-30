@@ -3,6 +3,8 @@
 
 <?php get_template_part('partials/heros/page_hero' ); ?>
 
+page.php
+
 <?php get_template_part('partials/page/content' ); ?>
 
 <?php get_template_part('partials/footer' ); ?>
