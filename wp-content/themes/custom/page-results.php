@@ -3,8 +3,7 @@
 
 <?php get_template_part('partials/heros/page_hero' ); ?>
 
-<h1>Results Page</h1>
-
+<?php get_template_part('partials/results/list' ); ?>
 
 <?php get_template_part('partials/results/content' ); ?>
 
