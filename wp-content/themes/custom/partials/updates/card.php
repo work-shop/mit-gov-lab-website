@@ -22,7 +22,7 @@
                 <?php endif; ?>
             </h6>
 
-            <a href="{{ url( item ) }}"><h3 class="updates-tile-title bold"><?php echo get_the_title(); ?></h3></a>
+            <a href="<?php echo get_the_permalink(); ?>"><h3 class="updates-tile-title bold"><?php echo get_the_title(); ?></h3></a>
 
             <h5 class="updates-tile-summary"><?php echo get_field('summary'); ?></h5>
 
