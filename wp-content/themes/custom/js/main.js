@@ -21,10 +21,12 @@ import { livereload } from './livereload-client.js';
 import { stickyNav } from './sticky-nav.js';
 import { dropdowns } from './dropdowns.js';
 import { menuToggle } from './menu-toggle.js';
+import { sizing } from './sizing.js';
 
 //must use
 livereload();
 loading(config.loading);
+sizing();
 // linksNewtab(config.linksNewtab);
 // viewportLabel(config.viewportLabel);
 // jqueryAccordian();
