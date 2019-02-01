@@ -31,7 +31,7 @@
             <div class="row bg-white pt2">
 
                 <div class="col-xs-offset-1 col-xs-10 centered">
-                    <h4 class="mt0">
+                    <h4 class="mt2">
                         <?php echo get_field('page_introduction_text'); ?>
                     </h4>
                 </div>

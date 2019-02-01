@@ -9,15 +9,15 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-offset-1 col-xs-10"><a class="sync" href="/news"><h4 class="h2 bold">Updates</h4></a></div>
+            <div class="col-xs-offset-1 col-xs-10"><a class="sync" href="/updates"><h4 class="h2 bold">Updates</h4></a></div>
         </div>
 
         <div class="row">
-            <div class="col-xs-offset-1 col-xs-10"><a class="sync" href="/projects"><h4 class="h2 bold">Research</h4></a></div>
+            <div class="col-xs-offset-1 col-xs-10"><a class="sync" href="/research"><h4 class="h2 bold">Research</h4></a></div>
         </div>
 
         <div class="row">
-            <div class="col-xs-offset-1 col-xs-10"><a class="sync" href="/output"><h4 class="h2 bold">Results</h4></a></div>
+            <div class="col-xs-offset-1 col-xs-10"><a class="sync" href="/results"><h4 class="h2 bold">Results</h4></a></div>
         </div>
 
     </div>

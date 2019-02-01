@@ -33,7 +33,10 @@
                         <?php endforeach; ?>
                     </div>
 
-                    <?php if ( count($affiliates) > 0 ): ?>
+                    <?php // NOTE: Prevent rendering of affiliates for now.
+                          // We may revisit this in the future. 
+                    ?>
+                    <?php if ( false && count($affiliates) > 0 ): ?>
                         <div class="row mb4">
                             <div class="col-sm-offset-1 col-xs-11 mb2" >
                                 <div class="projects-rule"></div>
