@@ -42,4 +42,5 @@ sizing();
 // menuToggle(config.menuToggle);
 
 // NOTE: use old-style require for
-require('./legacy/functions.js');
+// files imported from legacy govlab site.
+require('./legacy/functions.js')();

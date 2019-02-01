@@ -9,7 +9,7 @@
                     <?php foreach ($updates as $post): ?>
 
                         <?php setup_postdata( $post ); ?>
-                        <?php get_template_part('partials/updates/card'); ?>
+                        <?php get_template_part('partials/updates/row'); ?>
 
                     <?php endforeach; ?>
 
