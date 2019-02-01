@@ -25,6 +25,8 @@ class Helpers{
 
 
     public static function get_related_work( $id, $author_query=false ) {
+        if ( $author_query ) { return static::get_related_work_for_author( $id ); }
+
         $direct_related_work = get_field( 'related_work', $id );
 
         $inverse_related_work = get_posts(array(
@@ -32,6 +34,32 @@ class Helpers{
             'meta_query' => array(
                 array(
                     'key' => 'related_work',
+                    'value' => '"' . $id . '"',
+                    'compare' => 'LIKE'
+                )
+            )
+        ));
+
+        if ( $direct_related_work ) {
+
+            return static::combine_arrays( $direct_related_work, $inverse_related_work );
+
+        } else {
+
+            return $inverse_related_work;
+
+        }
+
+    }
+
+    public static function get_related_work_for_author( $id ) {
+        $direct_related_work = get_field( 'related_work', $id );
+
+        $inverse_related_work = get_posts(array(
+            'post_type' => array( 'updates', 'research', 'results' ),
+            'meta_query' => array(
+                array(
+                    'key' => 'govlab_authors',
                     'value' => '"' . $id . '"',
                     'compare' => 'LIKE'
                 )

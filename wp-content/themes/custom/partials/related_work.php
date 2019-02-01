@@ -1,4 +1,4 @@
-<?php $related_work = Helpers::get_related_work( get_the_ID() ); ?>
+<?php $related_work = Helpers::get_related_work( get_the_ID(), $post->post_type == 'people' ); ?>
 <?php if ( count( $related_work ) > 0 ) : ?>
     <section id="project-related" class="bg-light">
             <div class="container-fluid">
