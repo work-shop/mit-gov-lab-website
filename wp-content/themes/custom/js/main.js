@@ -44,3 +44,7 @@ sizing();
 // NOTE: use old-style require for
 // files imported from legacy govlab site.
 require('./legacy/functions.js');
+require('./legacy/iframeResizer.min.js')();
+$( document ).ready(function() {
+    $('#evidence-gap-map-frame').iFrameResize({log:false});
+});
