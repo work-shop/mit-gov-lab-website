@@ -46,7 +46,27 @@
 
             <div class="col-sm-offset-1 col-sm-10">
                 <ul id="completed-projects-list" class="row">
-                    <?php // past projects  ?>
+                    <?php $taxonomy_query = array(
+                        'post_type' => 'research',
+                        'posts_per_page' => -1,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'research-status',
+                                'terms' => 'past',
+                                'field' => 'slug',
+                                'include_childern' => false,
+                                'operator' => 'IN'
+                            )
+                        )
+                    ); ?>
+                    <?php global $post; ?>
+                    <?php $past_research = get_posts( $taxonomy_query ); ?>
+                    <?php foreach ( $past_research as $post ): ?>
+
+                        <?php setup_postdata( $post ); ?>
+                        <?php get_template_part( 'partials/research/card' ); ?>
+
+                    <?php endforeach; ?>
                 </ul>
             </div>
 
