@@ -13,7 +13,13 @@
                         </div>
                     </div>
 
-                    <?php $updates = get_posts(array('post_type'=>'updates', 'posts_per_page'=>5)); ?>
+                    <?php $updates = get_posts(array(
+                        'post_type'=>'updates',
+                        'posts_per_page'=>5,
+                        'meta_key' => 'publication_date',
+                        'orderby' => 'meta_value',
+                        'order' => 'DESC'
+                    )); ?>
 
                     <?php foreach( $updates as $post ): ?>
 
