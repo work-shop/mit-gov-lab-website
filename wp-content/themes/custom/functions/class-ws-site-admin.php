@@ -68,6 +68,9 @@ class WS_Site_Admin {
                 "icon_url" => "dashicons-admin-home"
             ));
         }
+
+        acf_update_setting('google_api_key', 'AIzaSyDnkVqE9qkl1rcpCEBglSHDnJZZONMEvfs');
+        
     }
 
     public function pages_per_page_wpse_23503( $check, $object_id, $meta_key, $single ) {
