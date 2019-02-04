@@ -1,41 +1,57 @@
+// @import "bourbon";
+// //@import "bootstrap/bootstrap"; // TODO: remove references to this, and deprecate issues with our code that depends on it in this project.
+// @import "bootstrap";
+// @import "slick.scss";
+//
+// //definitions
+// @import "definitions/variables";
+// @import "definitions/type-sizes";
+// @import "definitions/mixins";
+//
+// //utilities
+// @import "utilities/reset";
+// @import "utilities/sizing";
+// @import "utilities/margins-and-padding";
+// @import "utilities/backgrounds";
+// @import "utilities/modals";
+// @import "utilities/slick-components";
+// @import "utilities/helpers";
+// @import "utilities/type-size-mixin/type-size__mixin"; // thanks to mmarol
+// @import "utilities/jquery-accordian";
+// @import "utilities/accordion";
+// @import "utilities/flexible-content";
+//
+// //site components
+// @import "site/typography";
+// @import "site/general";
+// @import "utilities/forms";
+// @import "site/nav";
+// @import "site/menus";
+// @import "site/footer";
+// @import "site/headers";
+// @import "site/wysiwyg";
+// @import "site/sitewide-alert";
+//
+// //site pages and partials
+// @import "site/page";
+// @import "site/map";
+// @import "site/style";
+// @import "site/aside";
+// @import "site/cards";
 
-@import "bourbon";
-//@import "bootstrap/bootstrap"; // TODO: remove references to this, and deprecate issues with our code that depends on it in this project.
+// ^^^ New CSS Imports ^^^
+
 @import "bootstrap";
-@import "slick.scss";
-
-//definitions
-@import "definitions/variables";
-@import "definitions/type-sizes";
-@import "definitions/mixins";
-
-//utilities
-@import "utilities/reset";
-@import "utilities/sizing";
-@import "utilities/margins-and-padding";
-@import "utilities/backgrounds";
-@import "utilities/modals";
-@import "utilities/slick-components";
-@import "utilities/helpers";
-@import "utilities/type-size-mixin/type-size__mixin"; // thanks to mmarol
-@import "utilities/jquery-accordian";
-@import "utilities/accordion";
-@import "utilities/flexible-content";
-
-//site components
-@import "site/typography";
-@import "site/general";
-@import "utilities/forms";
-@import "site/nav";
-@import "site/menus";
-@import "site/footer";
-@import "site/headers";
-@import "site/wysiwyg";
-@import "site/sitewide-alert";
-
-//site pages and partials
-@import "site/page";
-@import "site/map";
-@import "site/style";
-@import "site/aside";
-@import "site/cards";
+@import 'legacy/_variables';
+@import 'legacy/_mixins';
+@import 'legacy/_reset';
+@import 'legacy/_objects';
+@import 'legacy/_typography';
+@import 'legacy/_map';
+@import 'legacy/_wysiwyg_figures';
+@import 'legacy/_style';
+@import 'legacy/_individual-headers';
+@import 'legacy/_cards';
+@import 'legacy/_alert';
+@import 'legacy/_slick-components';
+@import 'legacy/_slideshows';

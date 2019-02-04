@@ -1,0 +1,195 @@
+.card-wrapper {
+    width:100%;
+    height:0;
+    padding-bottom:100%;
+}
+
+.card-tile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+
+    padding-left: 2em;
+    padding-right: 2em;
+
+}
+
+
+.project-tile-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.project-tile-title {
+	@extend .bold;
+    @extend .white;
+
+    margin-top: 1em;
+}
+
+.project-tile-title-large {
+    font-size: 1em;
+}
+
+.project-tile-topics {
+    position: absolute;
+    bottom: 1em;
+
+    font-size: 0.8em;
+
+    width: 80%;
+
+    padding-right:2em;
+}
+
+.projects-rule {
+	border-top:2px solid $brand;
+}
+
+
+
+.research-label {
+    background-color: $research-color;
+    padding:5px;
+}
+
+.research-wrapper {
+    border-bottom: 5px solid $research-color;
+}
+
+.research-tile-overlay {
+    background-color:rgba(50,50,50,.6);
+}
+
+.research-tile-overlay:hover {
+    background-color: $research-color-60;
+
+    .research-label {
+        background-color: white;
+        color: $research-color;
+    }
+
+}
+
+
+
+
+.results-label {
+    background-color: $results-color;
+    padding:5px;
+}
+
+.no-image .results-label {
+    background-color: $results-color;
+    color: $light;
+    padding:5px;
+}
+
+.results-wrapper {
+    border-bottom: 5px solid $results-color;
+    background-color: $medium-light;
+}
+
+.result-tile-overlay {
+    background-color:rgba(50,50,50,.6);
+}
+
+.result-tile-overlay.no-image {
+    background-color:transparent;
+
+    .project-tile-title, .project-tile-topics {
+        color: $results-color;
+    }
+}
+
+.result-tile-overlay:hover {
+    background-color: rgba(50,50,50,.9);
+
+    // .project-tile-title, .project-tile-topics {
+    //     color: $results-color;
+    // }
+    //
+    .results-label {
+        background-color: white;
+        color: $results-color;
+    }
+}
+
+.result-tile-overlay.no-image:hover {
+    background-color: $results-color;
+    color: white;
+
+    .project-tile-title, .project-tile-topics {
+        color: white;
+    }
+
+    .results-label {
+        background-color: white;
+        color: $results-color;
+    }
+
+}
+
+
+
+.updates-label {
+    background-color: $updates-color;
+    padding:5px;
+}
+
+.updates-wrapper {
+    border-bottom: 5px solid $updates-color;
+    background-color: $updates-color;
+}
+
+.updates-tile-overlay {
+    background-color:rgba(50,50,50,.8);
+}
+
+.updates-tile-overlay:hover {
+    background-color: $updates-color-60;
+
+    .updates-label {
+        background-color: $light;
+        color: $updates-color;
+    }
+}
+
+@media ( max-width: $xs-size ) {
+    .project-tile-title-large {
+        font-size: 2em;
+    }
+}
+
+@media ( min-width: $xs-size ) and ( max-width: $sm-size ) {
+    .project-tile-title-large {
+        font-size: 1.5em;
+    }
+}
+
+@media ( min-width: $sm-size ) and ( max-width: $md-size ) {
+    .project-tile-title-large {
+        font-size: 1.6em;
+    }
+}
+
+@media ( min-width: $md-size ) and ( max-width: $lg-size ) {
+    .project-tile-title-large {
+        font-size: 1em;
+    }
+}
+
+@media ( min-width: $lg-size ) {
+    .project-tile-title-large {
+        font-size: 1em;
+    }
+}
+
+@media ( min-width: $lg-size + 400px ) {
+    .project-tile-title-large {
+        font-size: 1.25em;
+    }
+}

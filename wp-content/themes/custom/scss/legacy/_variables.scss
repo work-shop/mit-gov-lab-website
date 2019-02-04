@@ -1,0 +1,47 @@
+/********** @VARIABLES *********/
+
+$white: #ffffff;
+$brand: #cc3333; // [MIT Political Science Red](http://web.mit.edu/polisci/)
+$ultra-light: #fafafa;
+$light: #f1f1f1;
+
+$medium-light: darken( $light, 20 );
+$dark: #222222;
+$medium-dark: lighten( $dark, 20 );
+$medium: #555555;
+$error: #ff4a4a;
+
+$research-color:#cc3333;
+$research-color-60:rgba(204,51,51,.8);
+
+$results-color:#363333;
+$results-color-60: rgba(54,51,51,.7);
+
+$updates-color:#357ca0;
+$updates-color-60:rgba(53,124,160,.7);
+
+$black-rgba-30: rgba(0, 0, 0, .4);
+$brand-rgba-60: rgba(204, 51, 51, .7);
+
+$nav-height: 75px;
+$mobile-margins: 15px;
+
+$transitions: .25s;
+
+$lg-size: 1201px;
+$lg-query: "min-width: #{ $lg-size }";
+
+$md-size: 1200px;
+$md-query: "max-width: #{$md-size}";
+
+$sm-size: 992px;
+$sm-query: "max-width: #{$sm-size}";
+
+$xs-size: 767px;
+$xs-query: "max-width: #{ $xs-size }";
+
+
+$transition-duration: .75s;
+
+$open-skew: 0deg;
+$closed-skew:-5deg;
