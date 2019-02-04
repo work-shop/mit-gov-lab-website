@@ -24,17 +24,15 @@
         			</div>
 
                     <div class="row">
-                        <?php global $index; ?>
                         <?php foreach ( $team as $i => $post ): ?>
                             <?php setup_postdata( $post ); ?>
-                            <?php $index = $i; ?>
                             <?php get_template_part('partials/people/card'); ?>
                             <?php wp_reset_postdata(); ?>
                         <?php endforeach; ?>
                     </div>
 
                     <?php // NOTE: Prevent rendering of affiliates for now.
-                          // We may revisit this in the future. 
+                          // We may revisit this in the future.
                     ?>
                     <?php if ( false && count($affiliates) > 0 ): ?>
                         <div class="row mb4">
