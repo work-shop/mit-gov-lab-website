@@ -3,16 +3,17 @@
     <?php $hero = get_field('hero_image');  ?>
     <?php $authors = get_field('govlab_authors'); ?>
     <?php $external_authors = get_field('external_authors'); ?>
+    <?php $pubdate = date('F Y', strtotime(get_field('publication_date'))); ?>
 
     <div class="row">
 
         <div class="col-sm-4">
-            <img class="updates-tile-image" src="<?php echo $hero['sizes']['medium'] ?>" />
+            <img class="updates-tile-image" src="<?php echo $hero['sizes']['sm_square']; ?>" />
         </div>
 
         <div class="col-sm-8">
             <h6 class="updates-tile-metadata bold">
-                <?php echo get_field('publication_date'); ?>
+                <?php echo $pubdate; ?>
 
                 <?php if ( ($total_authors = count( $authors )) > 0 ): ?>
                     <span class="brand-stroke">/</span>
