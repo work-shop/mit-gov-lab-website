@@ -36,56 +36,64 @@ defined('ABSPATH') or die("You can't access this file directly.");
 
     <div class='asp_content'>
 
+            <?php if (!empty($r->image)): ?>
 
-        <?php if (!empty($r->image)): ?>
+                <?php do_action('asp_res_vertical_before_image'); ?>
 
-            <?php do_action('asp_res_vertical_before_image'); ?>
-
-            <?php if ( $load_lazy == 1 ): ?>
-                <a class='asp_res_image_url' href='<?php echo $r->link; ?>'<?php echo ($s_options['results_click_blank'])?" target='_blank'":""; ?>>
-                    <div class='asp_image asp_lazy' data-src="<?php echo $r->image; ?>">
-                        <div class='void'></div>
-                    </div>
-                </a>
-                <?php else: ?>
+                
+                <?php if ( $load_lazy == 1 ): ?>
                     <a class='asp_res_image_url' href='<?php echo $r->link; ?>'<?php echo ($s_options['results_click_blank'])?" target='_blank'":""; ?>>
-                        <div class='asp_image' style='background-image: url("<?php echo $r->image; ?>");'>
+                        <div class='asp_image asp_lazy' data-src="<?php echo $r->image; ?>">
                             <div class='void'></div>
                         </div>
                     </a>
+                    <?php else: ?>
+                        <a class='asp_res_image_url' href='<?php echo $r->link; ?>'<?php echo ($s_options['results_click_blank'])?" target='_blank'":""; ?>>
+                            <div class='asp_image' style='background-image: url("<?php echo $r->image; ?>");'>
+                                <div class='void'></div>
+                            </div>
+                        </a>
+                    <?php endif; ?>
+
+                    <?php do_action('asp_res_vertical_after_image'); ?>
+
                 <?php endif; ?>
 
-                <?php do_action('asp_res_vertical_after_image'); ?>
+                <div class='etc'>
 
-            <?php endif; ?>
+                    <?php $type = get_post_type($r->id); ?> 
 
-            <div class='etc'>
+                    <span class="result-type"><?php echo $type; ?></span>
 
-                <?php if ( $s_options['showauthor'] == 1 && !empty($r->author) ): ?>
-                    <span class='asp_author'><?php echo $r->author; ?></span>
-                <?php endif; ?>
+                    <?php if ( $s_options['showdate'] == 1 && !empty($r->date) ): ?>
+                        <span class='asp_date'><?php echo $r->date; ?></span>
+                    <?php endif; ?>
 
-                <?php if ( $s_options['showdate'] == 1 && !empty($r->date) ): ?>
-                    <span class='asp_date'><?php echo $r->date; ?></span>
-                <?php endif; ?>
+                    <?php // if(false): ?>
+                    <?php if ( $s_options['showauthor'] == 1 && !empty($r->author) ): ?>
+                        <span class='asp_author'><?php echo $r->author; ?></span>
+                    <?php endif; ?>
+                    <?php // endif; ?>
 
-            </div>
-
-
-            <h3><a class="asp_res_url" href='<?php echo $r->link; ?>'<?php echo ($s_options['results_click_blank'])?" target='_blank'":""; ?>>
-                <?php echo $r->title; ?>
-                <?php if ($s_options['resultareaclickable'] == 1): ?>
-                    <span class='overlap'></span>
-                <?php endif; ?>
-            </a></h3>
-
-
-
-            <?php if ($s_options['showdescription'] == 1): ?>
-                <div class="asp_res_text">
-                    <?php echo $r->content; ?>
                 </div>
-            <?php endif; ?>
+
+                <h3><a class="asp_res_url" href='<?php echo $r->link; ?>'<?php echo ($s_options['results_click_blank'])?" target='_blank'":""; ?>>
+                    <?php echo $r->title; ?>
+                    <?php if ($s_options['resultareaclickable'] == 1): ?>
+                        <span class='overlap'></span>
+                    <?php endif; ?>
+                </a></h3>
+
+                <?php if ($s_options['showdescription'] == 1): ?>
+                    <div class="asp_res_text">
+                        <?php if( $type === 'updates' || $type === 'results' || $type === 'updates' ): ?>
+                            <?php the_field('summary',$r->id); ?>
+                            <?php else: ?>
+                        <?php echo $r->content; ?>
+                    <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+
 
         </div>
 
