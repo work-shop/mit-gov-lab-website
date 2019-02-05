@@ -36,23 +36,23 @@ a {
         border-bottom:1px solid transparent;
     }
 
-	&.active {
-		@extend .bold;
-	}
+    &.active {
+      @extend .bold;
+  }
 
-	&:hover {
-		color: $brand;
-        border-color: $brand;
-	}
+  &:hover {
+      color: $brand;
+      border-color: $brand;
+  }
 
-    &.link:hover {
-        border-color: transparent;
-    }
+  &.link:hover {
+    border-color: transparent;
+}
 
-    &.skew-field:hover {
-        border-bottom:1px solid transparent;
-		color: $brand;
-	}
+&.skew-field:hover {
+    border-bottom:1px solid transparent;
+    color: $brand;
+}
 
 }
 
@@ -81,8 +81,8 @@ footer a, footer a.footer-link {
 	@extend .bold;
 	color: $brand;
     border-bottom: 0;
-	display: inline-block;
-	@include transition(all,.1s);
+    display: inline-block;
+    @include transition(all,.1s);
 
 }
 
@@ -116,10 +116,10 @@ header {
 	@include transition(all,.25s);
     text-align: right;
 
-	&.fixed {
-		left: 0;
-		width: 100%;
-	}
+    &.fixed {
+      left: 0;
+      width: 100%;
+  }
 
 }
 
@@ -172,7 +172,7 @@ $closed-X: -200%;
 
 
 
-menu, #search-box {
+menu{
 	position: fixed;
 	padding:0px;
 	width:95%;
@@ -180,13 +180,13 @@ menu, #search-box {
 	z-index:150;
     vertical-align: baseline;
 
-	overflow-x:hidden;
+    overflow-x:hidden;
 
-	@include transform( skewX( $closed-skew ) translateX( $closed-X ) );
-	@include transition( transform, $transition-duration );
+    @include transform( skewX( $closed-skew ) translateX( $closed-X ) );
+    @include transition( transform, $transition-duration );
 
-	&.closed {
-		@include transform( skewX( $closed-skew ) translateX( $closed-X ) );
+    &.closed {
+      @include transform( skewX( $closed-skew ) translateX( $closed-X ) );
 		//@include animation( menu-close, 5s, both );
 	}
 
@@ -205,19 +205,119 @@ menu, #search-box {
 
 #search-box {
     position: fixed;
-	padding:0px;
-    top:2.5vh;
-	width:95vw;
-	height:95vh;
-	z-index:150;
-
-	overflow-x:hidden;
+    padding: 0px;
+    width: 100%;
+    height: 80px;
+    z-index: 150;
+    transform: translateX(0);
+    @include transition( transform, $transition-duration );
+    overflow-x: hidden;
+    top: -200px;
 
     &.open {
-        left:0%;
+        top: 100px;
+
+        @media screen and (max-width: $xs-size) {
+            top: 85px;
+
+
+            .col-xs-12{
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
     }
 
 }
+
+#overlay-search{
+    //display:none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: .75;
+    top: 100px;
+    left: 0;
+    z-index:100;
+    background: transparentize($dark, .5);
+    @include transition( all, $transition-duration );
+
+    @media screen and (max-width: $xs-size) {
+        top: 85px;
+    }
+
+
+    &.on {
+        //opacity:0.75;
+    }
+
+    &.off {
+        //display:none;
+        //opacity:0.0;
+    }
+
+}
+
+
+//input
+#ajaxsearchpro1_1, #ajaxsearchpro1_2, div.asp_m.asp_m_1{
+    padding: 0 30px;
+    box-shadow: inset 0px 0px 6px transparentize($dark,.9) !important;
+
+    input{
+        font-size: 20px !important;
+        color: $dark !important;
+        font-family: "SimplonNormMedium", Helvetica, arial, sans-serif !important;
+    }
+
+    @media screen and (max-width: $xs-size) {
+        padding: 0 5px;
+
+    }
+
+}
+
+
+//results
+#ajaxsearchprores1_1{
+    top: 180px !important;
+    padding-top: 30px !important;
+    border: none !important;
+    border-top: 1px solid #ccc !important;
+    border-bottom: 3px solid #ccc !important;
+
+    @media screen and (max-width: $xs-size) {
+        top: 165px !important;
+    }
+
+    .item{
+        padding: 15px 30px;
+
+        @media screen and (max-width: $xs-size) {
+            padding: 15px 10px;
+        }
+
+        .asp_image{
+            margin-right: 30px !important;
+        }
+
+        .asp_res_url{
+            color: $dark !important;
+            font-size: 20px !important; 
+            font-family: "SimplonNormMedium", Helvetica, arial, sans-serif !important;
+
+        }
+
+        .asp_res_text{
+            font-size: 16px !important;
+            font-family: "SimplonNormLight", Helvetica, arial, sans-serif !important;
+
+        }
+
+    }
+
+}
+
 
 
 
@@ -236,9 +336,9 @@ aside {
 	overflow-x: hidden;
     overflow-y: scroll;
 
-	@extend .mt3;
-	@extend .pl2;
-	@extend .pr1;
+    @extend .mt3;
+    @extend .pl2;
+    @extend .pr1;
 	//@extend .bg-white;
 
 	position: absolute;
@@ -266,25 +366,25 @@ aside {
         * {
             border-bottom: none;
         }
-	}
+    }
 
-	& .active {
-		border-color: $brand !important;
-	}
+    & .active {
+      border-color: $brand !important;
+  }
 
-	@media ($sm-query) {
-		width: 180px;
+  @media ($sm-query) {
+      width: 180px;
 
-		&.open {
-			left:20px;
-		}
-	}
+      &.open {
+       left:20px;
+   }
+}
 
-	@media (max-width: $xs-size + 50px ) {
-		&.open {
-			left:10px;
-		}
-	}
+@media (max-width: $xs-size + 50px ) {
+  &.open {
+   left:10px;
+}
+}
 }
 
 .page-about {
@@ -306,18 +406,18 @@ aside {
 }
 
 .sidebar-passive-heading {
- 	@extend .dark;
-	@extend .m1;
+  @extend .dark;
+  @extend .m1;
 
-	display:inline-block;
+  display:inline-block;
 
 }
 
 .sidebar-passive-subheading {
- 	@extend .dark;
-	@extend .m1;
+  @extend .dark;
+  @extend .m1;
 
-	display:inline-block;
+  display:inline-block;
 
 }
 
@@ -394,31 +494,31 @@ aside {
 
     font-size: .8em;
 
-	overflow:scroll;
+    overflow:scroll;
 
-	@include transform( skewX( $closed-skew ) translateX( $closed-X ) );
-	@include transition( transform, $transition-duration );
+    @include transform( skewX( $closed-skew ) translateX( $closed-X ) );
+    @include transition( transform, $transition-duration );
 
-	&.closed {
-		@include transform( skewX( $closed-skew ) translateX( $closed-X ) );
-	}
+    &.closed {
+      @include transform( skewX( $closed-skew ) translateX( $closed-X ) );
+  }
 
-	&.open {
-		position: fixed;
-		@include transform( skewX( $open-skew ) translateX( $open-X ) );
-	}
+  &.open {
+      position: fixed;
+      @include transform( skewX( $open-skew ) translateX( $open-X ) );
+  }
 
-	input[type="text"], input[type="email"] {
-		@extend .bg-white;
-		display:block;
-		border:0px;
-		border-bottom:2px solid $brand;
-	}
+  input[type="text"], input[type="email"] {
+      @extend .bg-white;
+      display:block;
+      border:0px;
+      border-bottom:2px solid $brand;
+  }
 
-	.email {
-		width:100%;
+  .email {
+      width:100%;
 
-	}
+  }
 
 }
 
@@ -599,7 +699,7 @@ hr {
  */
 
 
-@media ($lg-query) {
+ @media ($lg-query) {
     .project-summary, .project-title, .project-metadata {
         width: 900px;
         margin-left: auto;
@@ -933,15 +1033,15 @@ hr {
 .search-button {
     @extend .pictogram;
 
-	border:0px;
-	text-decoration: none;
+    border:0px;
+    text-decoration: none;
 
-	&:hover {
-		border:0px;
-		text-decoration: none;
-		font-style: normal;
-		font-weight: inherit;
-	}
+    &:hover {
+      border:0px;
+      text-decoration: none;
+      font-style: normal;
+      font-weight: inherit;
+  }
 }
 
 .search-gov-lab {
@@ -1018,43 +1118,43 @@ hr {
     }
 
 
-	 header {
-	 	padding:15px 0px 12px 0px;
-	 	height: 85px;
-	 }
+    header {
+       padding:15px 0px 12px 0px;
+       height: 85px;
+   }
 
-     #nav {
-         padding-top: 10px;
-     }
+   #nav {
+     padding-top: 10px;
+ }
 
-	 #header-shadow{
-	 	height: 70px;
-	 }
+ #header-shadow{
+   height: 70px;
+}
 
-	 #logo{
-	 	a{
-	 		width: 110px;
-	 	}
-	 }
+#logo{
+   a{
+    width: 110px;
+}
+}
 
-	 #map {
-	 	cursor: auto;
-	 }
+#map {
+   cursor: auto;
+}
 
-	.menu-item{
-		margin-top: 5px;
-		position: relative;
-		left: -15px;
-	}
+.menu-item{
+  margin-top: 5px;
+  position: relative;
+  left: -15px;
+}
 
 
-	.news-rule {
-		border-top:none;
-	}
+.news-rule {
+  border-top:none;
+}
 
-	*[aside-enter] {
-		padding-top: 0em !important;
-	}
+*[aside-enter] {
+  padding-top: 0em !important;
+}
 
 }
 

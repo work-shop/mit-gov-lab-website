@@ -393,7 +393,7 @@ $( document ).ready( function( ) {
     $('.search-trigger').on('click', cycle( '.search-trigger', '#search-box'));
 
     // Focus the search box whenever the menu button is clicked.
-    $('#search-trigger-button').on('click', function() { $('#search-input').focus(); });
+    $('#search-trigger-button').on('click', function() { $('input.orig').focus(); });
 
     $(document).keydown(function(e) {
     	if(e.which == 27){
