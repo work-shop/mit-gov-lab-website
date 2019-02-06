@@ -1,3 +1,7 @@
+
+
+<?php //turned off for now ?>
+<?php if(false): ?>
 <?php $collaborators = get_field('collaborators'); ?>
 <?php $funders = get_field('funders'); ?>
 
@@ -31,7 +35,7 @@
                                 <div class="projects-rule"></div>
                                 <h4 class="mb2">Collaborators</h4>
                                 <ul>
-                                    <?php foreach ( $collaborators as $i => $collaborators ): ?>
+                                    <?php foreach ( $collaborators as $i => $collaborator ): ?>
                                         <li>
                                             <?php if ( $collaborators['collaborator_link']): ?>
                                                 <a target="_blank" href="<?php echo $collaborators['collaborator_link']['url']; ?>">
@@ -51,7 +55,7 @@
                                 <div class="projects-rule"></div>
                                 <h4 class="mb2">Collaborators</h4>
                                 <ul>
-                                    <?php foreach ( $collaborators as $i => $collaborators ): ?>
+                                    <?php foreach ( $collaborators as $i => $collaborator ): ?>
                                         <li>
                                             <?php if ( $collaborators['collaborator_link']): ?>
                                                 <a target="_blank" href="<?php echo $collaborators['collaborator_link']['url']; ?>">
@@ -91,4 +95,5 @@
             </div>
         </div>
     </section>
+<?php endif; ?>
 <?php endif; ?>

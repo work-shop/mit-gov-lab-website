@@ -7,7 +7,7 @@
 
     <div class="row">
 
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <img class="updates-tile-image" src="<?php echo $hero['sizes']['sm_square']; ?>" />
         </div>
 

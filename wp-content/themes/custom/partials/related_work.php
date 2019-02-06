@@ -17,7 +17,6 @@
                                 <?php global $post; ?>
                                 <?php foreach ($related_work as $post) : ?>
 
-
                                     <?php setup_postdata( $post ); ?>
                                     <?php get_template_part('partials/' . $post->post_type . '/related_card'); ?>
                                     <?php wp_reset_postdata(); ?>

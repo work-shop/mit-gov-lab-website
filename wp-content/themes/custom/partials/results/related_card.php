@@ -4,7 +4,7 @@
     <a href="<?php echo get_the_permalink(); ?>" class="link">
         <?php if ( $hero ): ?>
             <div class="col-sm-2 hidden-xs related-image-block-container">
-                <div class="related-image-block" style="background-image:url('<?php echo $hero['sizes']['thumbnail']; ?>'); background-position:center 0%;"></div>
+                <div class="related-image-block" style="background-image:url('<?php echo $hero['sizes']['sm_square']; ?>'); background-position:center 0%;"></div>
             </div>
         <?php endif; ?>
     <div class="<?php if (!$hero): ?>col-sm-offset-2 <?php endif; ?>col-sm-10 col-xs-12">

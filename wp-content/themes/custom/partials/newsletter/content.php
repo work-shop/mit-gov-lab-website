@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-8 col-xs-offset-2 pb4">
+            <div class="col-xs-10 col-xs-offset-1 pb4">
                 <?php gravity_form(1, false, false, false, '', true, 12); ?>
             </div>
         </div>

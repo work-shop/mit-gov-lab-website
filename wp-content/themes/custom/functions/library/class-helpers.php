@@ -36,7 +36,10 @@ class Helpers{
                     'key' => 'related_work',
                     'value' => '"' . $id . '"',
                     'compare' => 'LIKE'
-                )
+                ),
+                'meta_key' => 'publication_date',
+                'orderby' => 'meta_value',
+                'order' => 'DESC'
             )
         ));
 
@@ -62,7 +65,10 @@ class Helpers{
                     'key' => 'govlab_authors',
                     'value' => '"' . $id . '"',
                     'compare' => 'LIKE'
-                )
+                ),
+                'meta_key' => 'publication_date',
+                'orderby' => 'meta_value',
+                'order' => 'DESC'
             )
         ));
 

@@ -3,10 +3,10 @@
 
 <div id="update-<?php echo $post->post_name; ?>"
     class=" grid-tile col-xs-12 col-sm-6 col-lg-4 mb2"
-    data-publish-date="<?php echo get_field('publication_date'); ?>">
+    data-publish-date="<?php echo date('F Y', strtotime(get_field('publication_date'))); ?>">
 
     <a href="<?php get_the_permalink() ?>">
-        <div class="project-tile-wrapper card-wrapper updates-wrapper" style="background: url('<?php echo $image['sizes']['medium']; ?>'); background-size:cover; background-position:center center;">
+        <div class="project-tile-wrapper card-wrapper updates-wrapper" style="background: url('<?php echo $image['sizes']['sm_square']; ?>'); background-size:cover; background-position:center center;">
 
             <div class="project-tile-overlay card-tile-overlay updates-tile-overlay p2">
                 <div class="">

@@ -2,7 +2,7 @@
 <?php $hero = get_field('hero_image'); ?>
 <?php $authors = get_field('govlab_authors'); ?>
 <?php $external_authors = get_field('external_authors'); ?>
-<?php $file = get_field('document'); ?>
+<?php $document = get_field('document'); ?>
 
 <div class="half individual-hero-image row <?php if( !$hero ): ?>hidden-xs<?php endif; ?>" style="background-image:url('<?php echo $hero['sizes']['page_hero']; ?>');"></div>
 

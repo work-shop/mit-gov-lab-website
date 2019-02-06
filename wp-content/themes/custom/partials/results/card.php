@@ -13,7 +13,7 @@
     <a href="<?php echo get_the_permalink(); ?>">
         <div class="project-tile-wrapper card-wrapper results-wrapper" <?php if ($hero): ?>style="background: url(<?php echo $hero['sizes']['sm_square']; ?>); background-size:cover; background-position:center center;"<?php endif; ?> >
 
-        <div class="project-tile-overlay card-tile-overlay result-tile-overlay <?php if (!$hero): ?>no-image<?php endif; ?> p2">
+            <div class="project-tile-overlay card-tile-overlay result-tile-overlay <?php if (!$hero): ?>no-image<?php endif; ?> p2">
                 <div class="">
                     <h6 class="card-content-type"><span class="results-label uppercase white bold"><?php echo $term->name; ?></span></h6>
                 </div>
@@ -22,13 +22,13 @@
                 </div>
                 <h5 class="project-tile-topics white bold">
                     <span class=""><?php echo date('F Y', strtotime(get_field('publication_date'))); ?></span><?php if (($total_authors = count($authors)) > 0): ?> /
-                        <?php foreach ($authors as $i => $author): ?>
-                            <span class=""><?php echo $author->post_title; ?></span><?php if ($i < $total_authors - 1): ?>, <?php endif; ?>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
-                </h5>
-            </div>
+                    <?php foreach ($authors as $i => $author): ?>
+                        <span class=""><?php echo $author->post_title; ?></span><?php if ($i < $total_authors - 1): ?>, <?php endif; ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </h5>
         </div>
-    </a>
+    </div>
+</a>
 
 </div>

@@ -484,14 +484,14 @@ aside {
       width: 180px;
 
       &.open {
-         left:20px;
-     }
- }
+       left:20px;
+   }
+}
 
- @media (max-width: $xs-size + 50px ) {
+@media (max-width: $xs-size + 50px ) {
   &.open {
-     left:10px;
- }
+   left:10px;
+}
 }
 }
 
@@ -638,11 +638,11 @@ aside {
 
     input[type="text"], input[type="email"] {
         display:block;
-        border:1px solid $brand;
-        padding:1em;
+        border: 1px solid $medium;
+        padding: 1em;
 
         &:focus {
-            border:2px solid $brand;
+            border:2px solid $medium;
         }
 
     }
@@ -672,7 +672,7 @@ aside {
     padding:2em;
 }
 
-.subscribe-link {
+.subscribe-link{
     padding:.5em;
     border: 2px solid $brand;
     background-color: transparent;
@@ -684,6 +684,49 @@ aside {
     }
 
 }
+
+select{
+    border: 1px solid $medium;
+}
+
+#field_1_4{
+    width: 47%;
+    float: left;
+    margin-right: 6%;
+    clear: none;
+    margin-top: 2em;
+
+    @media screen and (max-width: $xs-size) {
+        margin-right: 0;
+        width: 100%;
+        float: none;
+    }
+}
+
+#field_1_5{
+    margin-top: 2em;
+    width: 47%;
+    float: left;
+    clear: none;
+
+    @media screen and (max-width: $xs-size) {
+        width: 100%;
+        float: none;
+    }
+}
+
+.gform_wrapper ul.gfield_checkbox li label, .gform_wrapper ul.gfield_radio li label{
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+#gform_submit_button_1{
+    width: 200px;
+    background: $brand;
+    margin: 1em auto;
+    color: white;
+    display: block;
+} 
 
 
 /********** @FEATURE *********/

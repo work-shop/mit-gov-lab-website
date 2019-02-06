@@ -15,15 +15,16 @@
                             </div>
                         </div>
                     </div>
-
-                    <?php if ( $file ) : ?>
-                        <div class="row">
-                            <div class="col-xs-offset-1 col-xs-5 pb4 download-button-wrapper">
-                                <span class="download-button-container">
-                                    <a href="<?php echo $file['url']; ?>" class="download-button mb1" target="_blank">Download</a>
-                                </span>
+                    <?php if ( false ) : ?>
+                        <?php if ( $file ) : ?>
+                            <div class="row">
+                                <div class="col-xs-offset-1 col-xs-5 pb4 download-button-wrapper">
+                                    <span class="download-button-container">
+                                        <a href="<?php echo $file['url']; ?>" class="download-button mb1" target="_blank">Download</a>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
+                        <?php endif; ?>
                     <?php endif; ?>
                 </div>
             </div>
