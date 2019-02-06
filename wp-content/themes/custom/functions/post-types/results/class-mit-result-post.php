@@ -18,7 +18,7 @@ class MIT_Result_Post extends WS_Custom_Post_Type {
                                         'revisions'
                                     ),
         'rewrite'                   => array(
-                                        'slug' => 'result',
+                                        'slug' => 'results',
                                         'with_front' => false,
                                         'feeds' => true,
                                         'pages' => true
