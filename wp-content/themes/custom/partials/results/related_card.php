@@ -1,7 +1,7 @@
 <?php $hero = get_field('hero_image'); ?>
 <?php $term = get_the_terms( $post->ID, 'result-type')[0]; ?>
 <li class="p0 col-xs-offset-1 col-xs-10 project-result search-result mb1">
-    <a href="<?php echo get_the_permalink(); ?>" class="link">
+    <a href="<?php echo get_the_permalink(); ?>" class="">
         <?php if ( $hero ): ?>
             <div class="col-sm-2 hidden-xs related-image-block-container">
                 <div class="related-image-block" style="background-image:url('<?php echo $hero['sizes']['sm_square']; ?>'); background-position:center 0%;"></div>
