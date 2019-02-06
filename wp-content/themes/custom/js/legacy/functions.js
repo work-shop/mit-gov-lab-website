@@ -395,13 +395,14 @@ $( document ).ready( function( ) {
     // Focus the search box whenever the menu button is clicked.
     $('#search-trigger-button').on('click', function() { $('input.orig').focus(); });
 
-    $(document).keydown(function(e) {
-    	if(e.which == 27){
-            $('.overlay-box').removeClass( 'open' ).addClass('closed');
-            $('.overlay' ).removeClass( 'open' ).addClass('closed').fadeOut( $( '.overlay-box' ).css('transition-duration') );
-            $( document.body ).css({overflow: 'scroll'});
-        }
-    });
+    //turned off escape key interaction because it was messing with new search
+    // $(document).keydown(function(e) {
+    // 	if(e.which == 27){
+    //         $('.overlay-box').removeClass( 'open' ).addClass('closed');
+    //         $('.overlay' ).removeClass( 'open' ).addClass('closed').fadeOut( $( '.overlay-box' ).css('transition-duration') );
+    //         $( document.body ).css({overflow: 'scroll'});
+    //     }
+    // });
 
 });
 
@@ -434,11 +435,11 @@ var asideFresh = true;
 $( window ).on( 'resize', resizeAside );
 
 $( window ).on( 'aside-absolute', function() {
-	console.log('aside-absolute');
+	//console.log('aside-absolute');
 
 	//area = $('aside').offset().top;
 
-	$('aside').animate({'position': 'absolute', 'top': 0 + "px"});
+	$('aside').css({'position': 'absolute', 'top': 0 + "px"});
 	//$('aside').animate({'position': 'absolute', 'top':  "px"});
 	$('aside').css({'position': 'absolute'});
 
@@ -450,7 +451,7 @@ $( window ).on( 'aside-absolute', function() {
 
 
 $( window ).on( 'aside-fixed', function() {
-	console.log('aside-fixed');
+	//console.log('aside-fixed');
 
 
 
@@ -461,7 +462,7 @@ $( window ).on( 'aside-fixed', function() {
 	//area = $('aside').offset().top + 20;
 	//
 
-	$('aside').animate({'top': area+"px"});
+	$('aside').css({'top': area+"px"});
 
 	//$('aside').animate({'top': (area+20)+"px"});
 	$('aside').css({'position': 'fixed'});

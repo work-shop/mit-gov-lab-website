@@ -32,76 +32,77 @@ defined('ABSPATH') or die("You can't access this file directly.");
 ?>
 <div class='item<?php echo apply_filters('asp_result_css_class', $asp_res_css_class); ?>'>
 
+    <?php $type = get_post_type($r->id); ?> 
+
     <?php do_action('asp_res_vertical_begin_item'); ?>
 
-    <div class='asp_content'>
+    <div class='asp_content result-<?php echo $type; ?>'>
 
-            <?php if (!empty($r->image)): ?>
+        <?php if (!empty($r->image)): ?>
 
-                <?php do_action('asp_res_vertical_before_image'); ?>
+            <?php do_action('asp_res_vertical_before_image'); ?>
 
-                
-                <?php if ( $load_lazy == 1 ): ?>
+
+            <?php if ( $load_lazy == 1 ): ?>
+                <a class='asp_res_image_url' href='<?php echo $r->link; ?>'<?php echo ($s_options['results_click_blank'])?" target='_blank'":""; ?>>
+                    <div class='asp_image asp_lazy' data-src="<?php echo $r->image; ?>">
+                        <div class='void'></div>
+                    </div>
+                </a>
+                <?php else: ?>
                     <a class='asp_res_image_url' href='<?php echo $r->link; ?>'<?php echo ($s_options['results_click_blank'])?" target='_blank'":""; ?>>
-                        <div class='asp_image asp_lazy' data-src="<?php echo $r->image; ?>">
+                        <div class='asp_image' style='background-image: url("<?php echo $r->image; ?>");'>
                             <div class='void'></div>
                         </div>
                     </a>
-                    <?php else: ?>
-                        <a class='asp_res_image_url' href='<?php echo $r->link; ?>'<?php echo ($s_options['results_click_blank'])?" target='_blank'":""; ?>>
-                            <div class='asp_image' style='background-image: url("<?php echo $r->image; ?>");'>
-                                <div class='void'></div>
-                            </div>
-                        </a>
-                    <?php endif; ?>
-
-                    <?php do_action('asp_res_vertical_after_image'); ?>
-
                 <?php endif; ?>
 
-                <div class='etc'>
+                <?php do_action('asp_res_vertical_after_image'); ?>
 
-                    <?php $type = get_post_type($r->id); ?> 
+            <?php endif; ?>
 
-                    <span class="result-type"><?php echo $type; ?></span>
+            <div class='etc'>
 
-                    <?php if ( $s_options['showdate'] == 1 && !empty($r->date) ): ?>
-                        <span class='asp_date'><?php echo $r->date; ?></span>
-                    <?php endif; ?>
+                <span class="result-type"><?php echo $type; ?></span>
 
-                    <?php // if(false): ?>
+                <?php if( $type === 'updates' || $type === 'results' || $type === 'updates' ): ?>
+                    <span class='asp_date'><?php echo date('F Y', strtotime(get_field('publication_date',$r->id))); ?></span>
+                <?php endif; ?>
+
+                <?php if(false): ?>
                     <?php if ( $s_options['showauthor'] == 1 && !empty($r->author) ): ?>
                         <span class='asp_author'><?php echo $r->author; ?></span>
                     <?php endif; ?>
-                    <?php // endif; ?>
+                <?php endif; ?>
 
-                </div>
+            </div>
 
-                <h3><a class="asp_res_url" href='<?php echo $r->link; ?>'<?php echo ($s_options['results_click_blank'])?" target='_blank'":""; ?>>
-                    <?php echo $r->title; ?>
-                    <?php if ($s_options['resultareaclickable'] == 1): ?>
-                        <span class='overlap'></span>
-                    <?php endif; ?>
-                </a></h3>
+            <h3><a class="asp_res_url" href='<?php echo $r->link; ?>'<?php echo ($s_options['results_click_blank'])?" target='_blank'":""; ?>>
+                <?php echo $r->title; ?>
+                <?php if ($s_options['resultareaclickable'] == 1): ?>
+                    <span class='overlap'></span>
+                <?php endif; ?>
+            </a></h3>
 
-                <?php if ($s_options['showdescription'] == 1): ?>
-                    <div class="asp_res_text">
-                        <?php if( $type === 'updates' || $type === 'results' || $type === 'updates' ): ?>
-                            <?php the_field('summary',$r->id); ?>
-                            <?php else: ?>
-                        <?php echo $r->content; ?>
-                    <?php endif; ?>
+            <?php if ($s_options['showdescription'] == 1): ?>
+                <div class="asp_res_text">
+                    <?php echo $r->content; ?>
+                    <?php if( $type === 'updates' || $type === 'results' || $type === 'updates' ): ?>
+                        <?php //the_field('summary',$r->id); ?>
+                        <?php else: ?>
+                            <?php //echo $r->content; ?>
+                        <?php endif; ?>
                     </div>
                 <?php endif; ?>
 
 
+            </div>
+
+            <?php do_action('asp_res_vertical_after_content'); ?>
+
+            <div class='clear'></div>
+
+            <?php do_action('asp_res_vertical_end_item'); ?>
+
         </div>
-
-        <?php do_action('asp_res_vertical_after_content'); ?>
-
-        <div class='clear'></div>
-
-        <?php do_action('asp_res_vertical_end_item'); ?>
-
-    </div>
-    <div class="asp_spacer"></div>
+        <div class="asp_spacer"></div>

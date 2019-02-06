@@ -9,7 +9,7 @@
         <?php endif; ?>
     <div class="<?php if (!$hero): ?>col-sm-offset-2 <?php endif; ?>col-sm-10 col-xs-12">
             <span class="h6 output-type uppercase bold mt0"><?php echo $term->name; ?></span>
-            <span class="h6 uppercase gray bold mt0"><?php echo get_field('publication_date'); ?></span>
+            <span class="h6 uppercase gray bold mt0"><?php echo date('F Y', strtotime(get_field('publication_date'))); ?></span>
             <h4 class="bold mt0"><?php echo $post->post_title; ?></h4>
             <p class="project-description small hidden-xs"><?php echo get_field('summary'); ?></p>
         </div>

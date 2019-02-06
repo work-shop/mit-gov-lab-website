@@ -28,7 +28,7 @@
         </div>
         <div class="row">
             <div class="col-xs-offset-1 col-sm-offset-0 col-xs-8 col-sm-10 result-metadata individual-metadata">
-                <span class="white bold"><?php echo get_field('publication_date'); ?></span>
+                <span class="white bold"><?php echo date('F Y', strtotime(get_field('publication_date'))); ?></span>
                 /
                 <?php foreach ( $authors as $i => $author ): ?>
                     <span class="bold"><?php echo $author->post_title; ?></span><?php if ( $i < count( $authors ) - 1 ): ?>, <?php endif; ?>

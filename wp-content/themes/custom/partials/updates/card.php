@@ -16,7 +16,7 @@
                     <h3 class="project-tile-title-large"><?php echo $post->post_title; ?></h3>
                 </div>
                 <h5 class="project-tile-topics white bold">
-                    <span class="white"><?php echo get_field('publication_date'); ?></span> /
+                    <span class="white"><?php echo date('F Y', strtotime(get_field('publication_date'))); ?></span> /
                     <?php foreach( $authors as $i => $author ):  ?>
                         <span class="white"><?php echo $author->post_title; ?></span><?php if ( $i < count( $authors ) - 1 ): ?>, <?php endif; ?>
                     <?php endforeach; ?>
