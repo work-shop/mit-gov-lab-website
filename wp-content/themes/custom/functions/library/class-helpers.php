@@ -37,15 +37,37 @@ class Helpers{
                     'value' => '"' . $id . '"',
                     'compare' => 'LIKE'
                 ),
-                'meta_key' => 'publication_date',
-                'orderby' => 'meta_value',
-                'order' => 'DESC'
-            )
+            ),
+            'meta_key' => 'publication_date',
+            'orderby' => 'meta_value',
+            'order' => 'DESC'
         ));
 
         if ( $direct_related_work ) {
 
-            return static::combine_arrays( $direct_related_work, $inverse_related_work );
+            $combined = static::combine_arrays( $direct_related_work, $inverse_related_work );
+
+            error_reporting(0);
+            // NOTE: There's a known USORT bug where the passed comparison function
+            // incorrectly reports that it's modified the source array, even when
+            // it hasn't. this error reporting hack handles suppressing that warning
+            // until the issue has been resolved.
+            usort( $combined, function( $a, $b ) {
+                $a_date = get_field('publication_date', $a->ID );
+                $b_date = get_field('publication_date', $b->ID );
+                if ( $a_date < $b_date ) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+            error_reporting(1);
+            // NOTE: There's a known USORT bug where the passed comparison function
+            // incorrectly reports that it's modified the source array, even when
+            // it hasn't. this error reporting hack handles suppressing that warning
+            // until the issue has been resolved.
+
+            return $combined;
 
         } else {
 
@@ -66,15 +88,37 @@ class Helpers{
                     'value' => '"' . $id . '"',
                     'compare' => 'LIKE'
                 ),
-                'meta_key' => 'publication_date',
-                'orderby' => 'meta_value',
-                'order' => 'DESC'
-            )
+            ),
+            'meta_key' => 'publication_date',
+            'orderby' => 'meta_value',
+            'order' => 'DESC'
         ));
 
         if ( $direct_related_work ) {
 
-            return static::combine_arrays( $direct_related_work, $inverse_related_work );
+            $combined = static::combine_arrays( $direct_related_work, $inverse_related_work );
+
+            error_reporting(0);
+            // NOTE: There's a known USORT bug where the passed comparison function
+            // incorrectly reports that it's modified the source array, even when
+            // it hasn't. this error reporting hack handles suppressing that warning
+            // until the issue has been resolved.
+            usort( $combined, function( $a, $b ) {
+                $a_date = get_field('publication_date', $a->ID );
+                $b_date = get_field('publication_date', $b->ID );
+                if ( $a_date < $b_date ) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+            error_reporting(1);
+            // NOTE: There's a known USORT bug where the passed comparison function
+            // incorrectly reports that it's modified the source array, even when
+            // it hasn't. this error reporting hack handles suppressing that warning
+            // until the issue has been resolved.
+
+            return $combined;
 
         } else {
 
