@@ -54,7 +54,7 @@
                                 'taxonomy' => 'research-status',
                                 'terms' => 'past',
                                 'field' => 'slug',
-                                'include_childern' => false,
+                                'include_children' => false,
                                 'operator' => 'IN'
                             )
                         )
