@@ -4,9 +4,9 @@
         <div class="container-fluid">
             <div class="row bg-white">
                 <div class="col-sm-offset-1 col-sm-4 person-image mb2">
-                    <img class="bio-image" src="<?php echo $image['sizes']['large']; ?>">
+                    <img class="bio-image" src="<?php echo $image['sizes']['md_square']; ?>">
                 </div>
-                <div class="col-sm-offset-1 col-sm-5 person-metadata">    
+                <div class="col-sm-offset-1 col-sm-5 person-metadata">
                  <h2><?php echo $post->post_title; ?></h2>
                  <h4 class="italic"><?php echo get_field('title'); ?></h4>
                  <?php if ( ($email = get_field('email') )): ?>
