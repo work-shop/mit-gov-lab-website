@@ -40,7 +40,8 @@ class Helpers{
             ),
             'meta_key' => 'publication_date',
             'orderby' => 'meta_value',
-            'order' => 'DESC'
+            'order' => 'DESC',
+            'posts_per_page' => -1
         ));
 
         if ( $direct_related_work ) {
@@ -81,7 +82,7 @@ class Helpers{
         $direct_related_work = get_field( 'related_work', $id );
 
         $inverse_related_work = get_posts(array(
-            'post_type' => array( 'updates', 'research', 'results' ),
+            'post_type' => array( 'research', 'updates', 'results' ),
             'meta_query' => array(
                 array(
                     'key' => 'govlab_authors',
@@ -91,7 +92,8 @@ class Helpers{
             ),
             'meta_key' => 'publication_date',
             'orderby' => 'meta_value',
-            'order' => 'DESC'
+            'order' => 'DESC',
+            'posts_per_page' => -1
         ));
 
         if ( $direct_related_work ) {
