@@ -313,8 +313,8 @@ div.asp_simple-circle{
             @media screen and (max-width: $xs-size) {
                 padding-left: 5px !important;
                 padding-right: 5px !important;
-            } 
-        }   
+            }
+        }
 
         .asp_res_image_url{
             width: 100% !important;
@@ -336,7 +336,7 @@ div.asp_simple-circle{
 
         .asp_res_url{
             color: $dark !important;
-            font-size: 20px !important; 
+            font-size: 20px !important;
             font-family: "SimplonNormMedium", Helvetica, arial, sans-serif !important;
             line-height: 1.1 !important;
 
@@ -726,8 +726,15 @@ select{
     margin: 1em auto;
     color: white;
     display: block;
-} 
+}
 
+.gform_confirmation_message {
+    text-align: center;
+}
+
+.gform_ajax_spinner {
+ display: none !important;
+}
 
 /********** @FEATURE *********/
 
