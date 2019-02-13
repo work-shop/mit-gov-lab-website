@@ -9,22 +9,26 @@ function makeMap () {
   var brandColor = '#cc3333';
   var latLng = { lat: 41.824, lng: -71.4128 };
 
-  return mapModule( {
-    selector: '.ws-map',
-    mapTypeControl: false,
-    streetViewControl: false,
-    fullscreenControl: false,
-    styles: tileStyle,
-    center: latLng,
-    zoom: 14,
-    marker: {
-      icon: {
-        fillColor: brandColor,
+  $( document ).ready( function() {
+
+    return mapModule( {
+      selector: '.ws-map',
+      mapTypeControl: false,
+      streetViewControl: false,
+      fullscreenControl: false,
+      styles: tileStyle,
+      center: latLng,
+      zoom: 14,
+      marker: {
+        icon: {
+          fillColor: brandColor,
+        },
+        popup: {
+          pointer: '8px',
+        }
       },
-      popup: {
-        pointer: '8px',
-      }
-    },
+    } );
+
   } );
 
 }

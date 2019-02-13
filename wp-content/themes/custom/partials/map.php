@@ -1,4 +1,17 @@
 <section class="block vh60 bg-light" id="map">
+
+
+	<?php 
+	$args = array(
+		'posts_per_page'        => -1,
+		'post_type'             => 'research'
+	);
+	$research_query = new WP_Query( $args );
+	while ( $research_query->have_posts() ) : $research_query->the_post(); ?>
+		<?php the_title(); ?>
+	<?php endwhile; ?>
+	<?php wp_reset_postdata(); ?>
+
 	<script>
       // `optionsForMapInitializer` extends options defined in the initializer.
       var mapOptions = {
