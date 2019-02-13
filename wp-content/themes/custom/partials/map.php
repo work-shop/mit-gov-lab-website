@@ -8,7 +8,7 @@
 	);
 	$research_query = new WP_Query( $args );
 	while ( $research_query->have_posts() ) : $research_query->the_post(); ?>
-		<?php the_title(); ?>
+		//$mapOptions = 
 	<?php endwhile; ?>
 	<?php wp_reset_postdata(); ?>
 
