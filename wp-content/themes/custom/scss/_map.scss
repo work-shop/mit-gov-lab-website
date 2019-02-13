@@ -3,7 +3,9 @@
 
 
 
-
+.ws-map {
+    height:50vh;
+}
 
 
 
@@ -110,7 +112,7 @@
 // 	display:inline-block;
 // 	width:32px;
 // 	height:32px;
-// 	cursor:default;	
+// 	cursor:default;
 
 // 	color: $medium-light;
 // 	background-color:white;
@@ -126,7 +128,7 @@
 // 	}
 
 // 	&.clickable {
-// 		cursor:pointer;	
+// 		cursor:pointer;
 
 // 		color: $brand;
 // 		border: 2px solid $brand;
