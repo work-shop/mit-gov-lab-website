@@ -22,11 +22,13 @@ import { stickyNav } from './sticky-nav.js';
 import { dropdowns } from './dropdowns.js';
 import { menuToggle } from './menu-toggle.js';
 import { sizing } from './sizing.js';
+import { makeMap } from './map.js';
 
 //must use
 livereload();
 loading(config.loading);
 sizing();
+makeMap();
 // linksNewtab(config.linksNewtab);
 // viewportLabel(config.viewportLabel);
 // jqueryAccordian();

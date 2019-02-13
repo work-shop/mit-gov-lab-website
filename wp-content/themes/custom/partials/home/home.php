@@ -2,4 +2,6 @@
 
 <?php get_template_part('partials/home/list'); ?>
 
+<?php get_template_part('partials/map'); ?>
+
 <?php get_template_part('partials/subscribe_link'); ?>
