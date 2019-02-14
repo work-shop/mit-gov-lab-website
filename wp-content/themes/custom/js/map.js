@@ -18,13 +18,13 @@ function makeMap () {
       fullscreenControl: false,
       styles: tileStyle,
       center: latLng,
-      //zoom: 14,
+      zoom: 2,
       marker: {
         icon: {
           fillColor: brandColor,
         },
         popup: {
-          pointer: '8px',
+          pointer: '10px',
         }
       },
     } );

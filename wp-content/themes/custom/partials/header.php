@@ -60,7 +60,9 @@
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 	<meta name="author" content="Work-Shop Design Studio http://workshop.co">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="google-site-verification" content="rkzvbRSqNl7UMn6z6V25KjBgUShyeDOBvnS8JiLNHKA" />
+	<meta name="google-site-verification" content="rkzvbRSqNl7UMn6z6V25KjBgUShyeDOBvnS8JiLNHKA" />
+
+	<script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDTkjwJK80N7YCWoKjhKz8c3J1tNEbJpRg"></script>
 
 	<?php wp_head(); ?>
 
@@ -79,6 +81,6 @@
 <body <?php body_class('fade-in loading before-scroll modal-off menu-closed dropdown-off mobile-dropdown-off curve-off ' . $sitewide_alert_class . ' '); ?>>
 
 
-    <?php get_template_part('partials/menu'); ?>
+	<?php get_template_part('partials/menu'); ?>
 	<?php get_template_part('partials/nav'); ?>
-    <?php get_template_part('partials/sitewide_alert'); ?>
+	<?php get_template_part('partials/sitewide_alert'); ?>
