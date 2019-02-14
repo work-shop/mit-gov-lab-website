@@ -14,7 +14,7 @@
 		<?php 
 		
 		$location = get_field('location');
-		$title = get_title();
+		$title = get_the_title();
 		$summary = get_field('summary');
 		$id = 'marker-' . get_the_ID();
 
