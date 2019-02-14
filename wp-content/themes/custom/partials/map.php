@@ -56,9 +56,6 @@
         	research.marker.popup.content = '<div class="marker-card"><a href="' + research.marker.link + '"><h4 class="marker-card-title">' + research.marker.title + '</h4><p class="marker-card-summary">' + research.marker.popup.summary + '</p></a></div>';
         });
 
-        // Log it out for verification.
-        console.log( mapOptions );
-
     </script>
     <div class="ws-map" data-options="mapOptions"></div>
     <div class="map-tagline">
