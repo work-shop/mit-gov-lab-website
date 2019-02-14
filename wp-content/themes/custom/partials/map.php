@@ -7,17 +7,31 @@
 		'post_type'             => 'research'
 	);
 	$research_query = new WP_Query( $args );
+	$count = 0;
+	$mapOptions = array();
+
 	while ( $research_query->have_posts() ) : $research_query->the_post(); ?>
-		//$mapOptions = 
+		<?php 
+		
+		$location = get_field('location');
+		$title = get_title();
+		$summary = get_field('summary');
+		$id = 'marker-' . get_the_ID();
+
+		$content = '<div class="marker-card">
+		<p class="marker-card-summary">'
+		. $summary .
+		'</p>
+		</div>';
+
+		//mapOptions JSON Object goes here
+		?>
 	<?php endwhile; ?>
 	<?php wp_reset_postdata(); ?>
 
 	<script>
-      // `optionsForMapInitializer` extends options defined in the initializer.
+      // `mapOptions` extends options defined in the initializer.
       var mapOptions = {
-      	map: {
-      		streetViewControl: true,
-      	},
       	data: [
       	{
       		"marker": {
@@ -47,7 +61,7 @@
       	}
       	],
       	render: {
-      		zoom: 14,
+      		zoom: 3,
       	}
       };
   </script>

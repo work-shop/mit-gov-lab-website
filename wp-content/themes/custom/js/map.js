@@ -7,7 +7,7 @@ function makeMap () {
   console.log('map.js loaded');
   
   var brandColor = '#cc3333';
-  var latLng = { lat: 41.824, lng: -71.4128 };
+  var latLng = { lat: 30, lng: 0 };
 
   $( document ).ready( function() {
 
@@ -18,7 +18,7 @@ function makeMap () {
       fullscreenControl: false,
       styles: tileStyle,
       center: latLng,
-      zoom: 14,
+      //zoom: 14,
       marker: {
         icon: {
           fillColor: brandColor,
