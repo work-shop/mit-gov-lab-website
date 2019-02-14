@@ -23,7 +23,7 @@
 		$link = get_the_permalink();
 		$id = 'marker-' . get_the_ID();
 
-		if ( $location['lat'] && $location['lng']) {
+		if ( $location && ($location['lat'] && $location['lng']) ) {
 
 			$researchObject = array(
 				'marker' => array(
