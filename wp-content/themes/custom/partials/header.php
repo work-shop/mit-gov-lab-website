@@ -62,7 +62,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="google-site-verification" content="rkzvbRSqNl7UMn6z6V25KjBgUShyeDOBvnS8JiLNHKA" />
 
-	<script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDTkjwJK80N7YCWoKjhKz8c3J1tNEbJpRg"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDnkVqE9qkl1rcpCEBglSHDnJZZONMEvfs"></script>
 
 	<?php wp_head(); ?>
 
