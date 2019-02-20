@@ -56,12 +56,14 @@
         	research.marker.popup.content = '<div class="marker-card"><a href="' + research.marker.link + '"><h4 class="marker-card-title">' + research.marker.title + '</h4><p class="marker-card-summary">' + research.marker.popup.summary + '</p></a></div>';
         });
 
+        mapOptions.render = { zoom: 3 };
+
     </script>
     <div class="ws-map" data-options="mapOptions"></div>
     <div class="map-tagline">
 		<h3 class="map-tagline-heading">
-			Our Work Spans<br>
-			The Globe
+			Our work spans<br>
+			the globe
 		</h3>
 		<h4 class="map-tagline-subheading">
 			We take a special interest in citizen engagement by under resourced groups and government accountability in challenging contexts.

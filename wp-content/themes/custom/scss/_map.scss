@@ -9,7 +9,7 @@
 		padding: 5px 10px 10px 10px;
 
 		h4{
-			line-height: 1.2;			
+			line-height: 1.2;
 		}
 
 		p{
@@ -35,6 +35,10 @@
 	border-radius: 2px;
 	//box-shadow: 0px 0px 5px transparentize($dark, .2);
 	//border: 1px solid red;
+
+    .map-tagline-heading {
+        font-family: "SimplonNormLight", Helvetica, arial, sans-serif;
+    }
 
 	@media screen and (max-width: 1024px) {
 		padding: 10px;
@@ -71,7 +75,9 @@
 	}
 }
 
-
+.page-id-13 .map-tagline {
+    display: none;
+}
 
 
 
