@@ -8,13 +8,13 @@
         <?php //get_template_part('partials/viewport_label' ); ?>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60836689-1"></script>
         <script>
         	window.dataLayer = window.dataLayer || [];
         	function gtag(){dataLayer.push(arguments);}
         	gtag('js', new Date());
-        	gtag('config', 'UA-');
-        </script> -->
+        	gtag('config', 'UA-60836689-1');
+        </script>
 
         <?php wp_footer(); ?>
 
