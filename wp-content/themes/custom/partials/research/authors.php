@@ -17,8 +17,8 @@
             </div>
 
 
-
-            <?php foreach ($authors as $i => $author): ?>
+            <?php $i = 0; ?>
+            <?php foreach ($authors as $author): ?>
 
                 <?php if ( $i % 5  == 0 ) : ?>
                     <div class="row">
@@ -36,7 +36,7 @@
                 <?php  if ($i % 5 == 4 || $i + 1 == count( $authors )): ?>
                     </div>
                 <?php endif; ?>
-
+                <?php $i += 1; ?>
             <?php endforeach; ?>
 
         </div>
