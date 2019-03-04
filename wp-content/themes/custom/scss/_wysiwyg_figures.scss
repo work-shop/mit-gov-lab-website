@@ -178,17 +178,20 @@ figure[data-type=quote] cite:before {
   content: "\2014\00a0";
 }
 
-.wy-figure-right {
+.wy-figure-right, .alignright {
+  display: inline;
   float: right;
   margin-left: 24px;
+  width:50%;
 }
 .wy-figure-right .wy-figure-controls {
   right: 0;
 }
 
-.wy-figure-left {
+.wy-figure-left, .alignleft {
   float: left;
   margin-right: 24px;
+  width:50%;
 }
 
 @media screen and (max-width: 480px) {
