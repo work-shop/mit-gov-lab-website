@@ -1,5 +1,7 @@
 <?php $image = get_field('hero_image'); ?>
 <?php $authors = get_field('govlab_authors'); ?>
+<?php $date = ($pub_date = get_field('publication_date')) ? $pub_date: $post->post_date; ?>
+
 
 <div id="update-<?php echo $post->post_name; ?>"
     class=" grid-tile col-xs-12 col-sm-6 col-lg-4 mb2"
@@ -16,7 +18,7 @@
                     <h3 class="project-tile-title-large"><?php echo $post->post_title; ?></h3>
                 </div>
                 <h5 class="project-tile-topics white bold">
-                    <span class="white"><?php echo date('F Y', strtotime(get_field('publication_date'))); ?></span> /
+                    <span class="white"><?php echo date('F Y', strtotime($date)); ?></span> /
                     <?php foreach( $authors as $i => $author ):  ?>
                         <span class="white"><?php echo $author->post_title; ?></span><?php if ( $i < count( $authors ) - 1 ): ?>, <?php endif; ?>
                     <?php endforeach; ?>

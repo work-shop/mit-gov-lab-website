@@ -1,5 +1,7 @@
 <?php $hero = get_field('hero_image'); ?>
 <?php $authors = get_field('govlab_authors'); ?>
+<?php $date = ($pub_date = get_field('publication_date')) ? $pub_date: $post->post_date; ?>
+
 
 <div class="half individual-hero-image row" style="background-image:url('<?php echo $hero['sizes']['page_hero']; ?>');"></div>
 
@@ -25,7 +27,7 @@
         </div>
         <div class="row">
             <div class="col-xs-offset-1 col-sm-offset-0 col-xs-8 col-sm-10 update-metadata individual-metadata">
-                <span class="white bold"><?php echo date('F Y', strtotime(get_field('publication_date'))); ?></span>
+                <span class="white bold"><?php echo date('F Y', strtotime($date)); ?></span>
                 /
                 <?php foreach ($authors as $i => $author): ?>
 
