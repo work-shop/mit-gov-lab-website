@@ -6,7 +6,13 @@
 <?php $date = ($pub_date = get_field('publication_date')) ? $pub_date: $post->post_date; ?>
 
 <div class="half individual-hero-image row <?php if( !$hero ): ?>hidden-xs<?php endif; ?>" style="background-image:url('<?php echo $hero['sizes']['page_hero']; ?>');"></div>
-
+<?php if ( $hero['caption'] ) : ?>
+    <div class="row mb2 hidden">
+        <div class="col-sm-offset-6 col-sm-5">
+            <p class="caption gray righted p-min"><?php echo $hero['caption']; ?></p>
+        </div>
+    </div>
+<?php endif; ?>
 <div class="row individual-metadata-container <?php if( !$hero ): ?>truncated<?php endif; ?>">
     <div class="col-xs-10 col-xs-offset-1 result-metadata-box individual-metadata-box <?php if( !$hero ): ?>truncated<?php endif; ?>">
         <div class="row">
@@ -47,11 +53,3 @@
         <?php endif; ?>
     </div>
 </div>
-
-<?php if ( $hero['caption'] ) : ?>
-    <div class="row mb2">
-        <div class="col-sm-offset-6 col-sm-5">
-            <p class="caption gray righted p-min"><?php echo $hero['caption']; ?></p>
-        </div>
-    </div>
-<?php endif; ?>

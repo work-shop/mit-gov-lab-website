@@ -4,6 +4,14 @@
 
 <div class="half individual-hero-image row" style="background-image:url('<?php echo $hero['sizes']['page_hero']; ?>');"></div>
 
+<?php if ( !empty( $hero['caption'] ) ): ?>
+    <div class="row mb2 hidden">
+        <div class="col-sm-offset-1 col-sm-10">
+            <p class="caption medium centered italic p-min"><?php echo $hero['caption']; ?></p>
+        </div>
+    </div>
+<?php endif; ?>
+
 <div class="row individual-metadata-container">
     <div class="col-xs-10 col-xs-offset-1 research-metadata-box individual-metadata-box">
         <div class="row">
@@ -33,11 +41,3 @@
         </div>
     </div>
 </div>
-
-<?php if ( !empty( $hero['caption'] ) ): ?>
-    <div class="row mb2">
-        <div class="col-sm-offset-1 col-sm-10">
-            <p class="caption medium centered italic p-min"><?php echo $hero['caption']; ?></p>
-        </div>
-    </div>
-<?php endif; ?>
