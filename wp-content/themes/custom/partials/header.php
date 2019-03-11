@@ -20,13 +20,19 @@
 	<?php
 	if( get_field('social_media_title') ):
 		$social_title = get_field('social_media_title');
-	else:
+    elseif ( is_front_page() ):
+        $social_title = get_bloginfo('name');
+    elseif ( $post && $post->post_title ):
+        $social_title = $post->post_title;
+    else:
 		$social_title = get_bloginfo( 'name' );
 	endif;
 	if( get_field('social_media_description') ):
 		$social_description = get_field('social_media_description');
-	else:
-		$social_description = '';
+	elseif ( get_field('summary') ):
+        $social_description = get_field('summary');
+    else:
+		$social_description = get_bloginfo('description');
 	endif;
 	if( get_field('social_media_url') ):
 		$social_url = get_field('social_media_url');
@@ -36,7 +42,9 @@
 	if( get_field('social_media_image') ):
 		$social_image_array = get_field('social_media_image');
 		$social_image = $social_image_array['sizes']['fb'];
-	else:
+	elseif( $hero = get_field('hero_image') ):
+        $social_image = $hero['sizes']['fb'];
+    else:
 		$social_image = get_bloginfo( 'template_directory' ) . '/images/social_card_v1.jpg';
 	endif;
 
@@ -50,7 +58,12 @@
 	<meta property="og:type" content="website" />
 
 	<!-- Twitter Card data -->
-	<meta name="twitter:card" value="<?php echo $social_description; ?>">
+	<meta name="twitter:card" value="summary_large_image">
+	<meta name="twitter:site" value="@<?php echo get_field('twitter', 'option'); ?>">
+	<meta name="twitter:title" value="<?php echo $social_title; ?>">
+	<meta name="twitter:description" value="<?php echo $social_description; ?>">
+	<meta name="twitter:image" value="<?php echo $social_image; ?>">
+
 
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_directory'); ?>/images/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_directory'); ?>/images/favicon-32x32.png">
