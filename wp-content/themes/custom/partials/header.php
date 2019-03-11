@@ -49,8 +49,6 @@
 	endif;
 
 	?>
-
-    <?php var_dump( $social_image ); ?>
 	<!-- Facebook Open Graph data -->
 	<meta property="og:title" content="<?php echo $social_title; ?>" />
 	<meta property="og:description" content="<?php echo $social_description; ?>" />
