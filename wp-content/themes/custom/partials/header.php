@@ -41,15 +41,16 @@
 	endif;
 	if( get_field('social_media_image') ):
 		$social_image_array = get_field('social_media_image');
-		$social_image = $social_image_array['sizes']['fb'];
+		$social_image = $social_image_array['sizes']['tw'];
 	elseif( $hero = get_field('hero_image') ):
-        $social_image = $hero['sizes']['fb'];
+        $social_image = $hero['sizes']['tw'];
     else:
 		$social_image = get_bloginfo( 'template_directory' ) . '/images/social_card_v1.jpg';
 	endif;
 
 	?>
 
+    <?php var_dump( $social_image ); ?>
 	<!-- Facebook Open Graph data -->
 	<meta property="og:title" content="<?php echo $social_title; ?>" />
 	<meta property="og:description" content="<?php echo $social_description; ?>" />
