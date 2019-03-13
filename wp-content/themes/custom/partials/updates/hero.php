@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-offset-1 col-sm-offset-0 col-xs-8 col-sm-10">
+            <div class="col-xs-offset-1 col-sm-offset-0 col-xs-8 col-sm-12">
                 <p class="update-summary individual-summary"><?php echo get_field('summary'); ?></p>
             </div>
         </div>

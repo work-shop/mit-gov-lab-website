@@ -6,7 +6,7 @@
 <?php $funders = get_field('funders'); ?>
 
 <?php if ( $collaborators || $funders ): ?>
-    <section id="project-sponsors" class="bg-light">
+    <section id="project-sponsors" class="bg-light ">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12 bg-white pb6">
@@ -57,13 +57,7 @@
                                 <ul>
                                     <?php foreach ( $collaborators as $i => $collaborator ): ?>
                                         <li>
-                                            <?php if ( $collaborators['collaborator_link']): ?>
-                                                <a target="_blank" href="<?php echo $collaborators['collaborator_link']['url']; ?>">
-                                                <?php endif; ?>
-                                                <span class="uppercase bold"><?php echo $collaborators['collaborator_name']; ?></span>
-                                            <?php if ( $funder['collaborator_link']): ?>
-                                                </a>
-                                            <?php endif; ?>
+                                            <span class="uppercase bold"><?php echo $collaborators['collaborator_name']; ?></span>
                                         </li>
                                     <?php endforeach; ?>
                                 </ul>
@@ -77,13 +71,7 @@
                                 <ul>
                                     <?php foreach ( $funders as $i => $funder ): ?>
                                         <li>
-                                            <?php if ( $funder['funder_link']): ?>
-                                                <a target="_blank" href="<?php echo $funder['funder_link']['url']; ?>">
-                                                <?php endif; ?>
-                                                <span class="uppercase bold"><?php echo $funder['funder_name']; ?></span>
-                                            <?php if ( $funder['funder_link']): ?>
-                                                </a>
-                                            <?php endif; ?>
+                                            <span class="uppercase bold"><?php echo $funder['funder_name']; ?></span>
                                         </li>
                                     <?php endforeach; ?>
                                 </ul>
