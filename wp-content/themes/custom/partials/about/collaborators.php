@@ -18,9 +18,7 @@
     			<?php foreach( $collaborators as $collaborator ): ?>
 
     				<div class="collaborator max-height-bounded bg-light p1 col-xs-offset-1 col-xs-4 col-sm-2 col-sm-offset-1 mb2">
-    					<?php if ($l = $collaborator['collaborator_link']) : ?><a target="_blank" class="link" href="<?php echo $l; ?>"><?php endif; ?>
-    					    <img class="collaborator-logo mb1" src="<?php echo $collaborator['collaborator_logo']['sizes']['md']; ?>" />
-    					<?php if ( $l ) : ?></a><?php endif; ?>
+    					<img class="collaborator-logo mb1" src="<?php echo $collaborator['collaborator_logo']['sizes']['md']; ?>" />
     				</div>
 
     			<?php endforeach; ?>
