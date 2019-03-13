@@ -8,11 +8,11 @@
                 </div>
                 <div class="col-sm-offset-1 col-sm-5 person-metadata">
                  <h2><?php echo $post->post_title; ?></h2>
-                 <h4 class="italic"><?php echo get_field('title'); ?></h4>
+                 <h4 class="italic mb1"><?php echo get_field('title'); ?></h4>
                  <?php if ( ($email = get_field('email') )): ?>
                     <div class="row">
                         <div class="col-xs-11">
-                            <p class="h6">email <span class="lowercase bold ml2"><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></span></p>
+                            <p class="h6 mt0">email <span class="lowercase bold ml2"><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></span></p>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -20,7 +20,7 @@
                 <?php if ( ($website = get_field('website') )): ?>
                     <div class="row">
                         <div class="col-xs-11">
-                            <p class="h6">website <span class="lowercase bold ml2"><a href="<?php echo $website; ?>"><?php echo $website; ?></a></span></p>
+                            <p class="h6 mt0">website <span class="lowercase bold ml2"><a href="<?php echo $website; ?>"><?php echo $website; ?></a></span></p>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -28,7 +28,7 @@
                 <?php if ( $twitter = get_field('twitter') ): ?>
                     <div class="row">
                         <div class="col-xs-11">
-                            <p class="h6">twitter <span class="lowercase bold ml2"><a href="http://twitter.com/<?php echo $twitter; ?>">@<?php echo $twitter; ?></a></span></p>
+                            <p class="h6 mt0">twitter <span class="lowercase bold ml2"><a href="http://twitter.com/<?php echo $twitter; ?>">@<?php echo $twitter; ?></a></span></p>
                         </div>
                     </div>
                 <?php endif; ?>
