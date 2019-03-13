@@ -1,11 +1,10 @@
 <?php $authors = get_field('govlab_authors'); ?>
-<?php if ( $authors ): ?>
+<?php $authors = array_filter( $authors, function( $author ) {
+    $status = get_field('relationship_to_govlab', $author->ID);
+    return $status == 'Team Member' || $status == 'team-member';
+}); ?>
 
-    <?php $authors = array_filter( $authors, function( $author ) {
-        $status = get_field('relationship_to_govlab', $author->ID);
-        return $status == 'Team Member' || $status == 'team-member';
-    }); ?>
-
+<?php if ( count( $authors ) > 0 ): ?>
     <section id="project-teammembers" class="bg-white mb2">
         <div class="container-fluid">
 
