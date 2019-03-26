@@ -24,11 +24,22 @@ import { menuToggle } from './menu-toggle.js';
 import { sizing } from './sizing.js';
 import { makeMap } from './map.js';
 
+// isNaN polyfill for IE11
+
+if ( typeof Object.isNaN === 'undefined' ) {
+    Object.isNaN = function( value ) {
+        var n = Number( value );
+        return n !== n;
+    };
+}
+
+
 //must use
 livereload();
 loading(config.loading);
 sizing();
 makeMap();
+
 // linksNewtab(config.linksNewtab);
 // viewportLabel(config.viewportLabel);
 // jqueryAccordian();
